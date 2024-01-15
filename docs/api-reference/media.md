@@ -1,0 +1,68 @@
+# Media
+
+## Introduction
+The `MediaService` manages photos and videos for a Location. Google requires you to provide a publicly accessible URL of the media file when creating it.
+
+You can access this service via `client.media`.
+
+### Official Documentation
+[Google Business Profile: Media API Reference](https://developers.google.com/my-business/reference/rest/v4/accounts.locations.media)
+
+---
+
+## Methods
+
+### `list(locationId, options)`
+
+#### Purpose
+Lists all media items associated with a location.
+
+#### Syntax
+```typescript
+async client.media.list(locationId: string, options?: { pageToken?: string }): Promise<any>
+```
+
+### `get(locationId, mediaKey)`
+
+#### Purpose
+Gets specific information about a single media item.
+
+#### Syntax
+```typescript
+async client.media.get(locationId: string, mediaKey: string): Promise<any>
+```
+
+### `create(locationId, data)`
+
+#### Purpose
+Uploads a new media item to the location using a source URL.
+
+#### Syntax
+```typescript
+async client.media.create(locationId: string, data: any): Promise<any>
+```
+
+#### Request Example
+```typescript
+const locationId = 'accounts/123/locations/456';
+const mediaData = {
+  mediaFormat: 'PHOTO',
+  locationAssociation: {
+    category: 'COVER'
+  },
+  sourceUrl: 'https://www.example.com/images/storefront.jpg'
+};
+
+const newMedia = await client.media.create(locationId, mediaData);
+console.log('Created media:', newMedia.name);
+```
+
+### `delete(locationId, mediaKey)`
+
+#### Purpose
+Deletes a media item from the location.
+
+#### Syntax
+```typescript
+async client.media.delete(locationId: string, mediaKey: string): Promise<void>
+```
