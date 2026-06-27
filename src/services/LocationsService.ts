@@ -1,5 +1,6 @@
 import { HttpClient } from '../http/HttpClient';
 import { AutoPaginator } from '../utils/AutoPaginator';
+import { CursorPaginator } from '../utils/CursorPaginator';
 
 export class LocationsService {
   private client: HttpClient;
@@ -49,15 +50,50 @@ export class LocationsService {
   }
 
   /**
+   * Returns a paginator object to manually fetch locations page by page.
+   */
+  public listPaginator(
+    accountId: string,
+    options: { pageSize?: number; readMask?: string } = {}
+  ): CursorPaginator<any> {
+    const parent = accountId.startsWith('accounts/')
+      ? accountId
+      : `accounts/${accountId}`;
+
+    if (!options.readMask) {
+      options.readMask =
+        'name,title,storeCode,websiteUri,phoneNumbers,regularHours';
+    }
+
+    return new CursorPaginator(
+      this.client,
+      `https://mybusinessbusinessinformation.googleapis.com/v1/${parent}/locations`,
+      'locations',
+      options
+    );
+  }
+
+  /**
    * Gets a specific location by ID.
    */
-  public async get(locationId: string): Promise<any> {
+  public async get(
+    locationId: string,
+    options: { readMask?: string } = {}
+  ): Promise<any> {
     const name = locationId.startsWith('locations/')
       ? locationId
       : `locations/${locationId}`;
+    if (!options.readMask) {
+      options.readMask =
+        'name,title,storeCode,websiteUri,phoneNumbers,regularHours';
+    } else {
+      options.readMask = options.readMask.replace(/\s+/g, '');
+    }
+
     return this.client.request({
       url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
       method: 'GET',
+      query: { readMask: options.readMask },
     });
   }
 
@@ -105,9 +141,8 @@ export class LocationsService {
       method: 'POST',
       body: data,
       query: {
-        ...(options?.validateOnly !== undefined && {
-          validateOnly: options.validateOnly,
-        }),
+        validateOnly:
+          options?.validateOnly !== undefined ? options.validateOnly : true,
         ...(options?.requestId && { requestId: options.requestId }),
       },
     });

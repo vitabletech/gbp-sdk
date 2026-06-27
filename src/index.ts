@@ -4,3 +4,4 @@ export * from './utils/Logger';
 export * from './authentication/MemoryTokenStorage';
 export * from './authentication/FileTokenStorage';
 export * from './clients/GBPClient';
+export * from './utils/CursorPaginator';

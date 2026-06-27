@@ -14,9 +14,10 @@ export class CategoriesService {
     languageCode?: string;
     view?: string;
     pageToken?: string;
+    regionCode?: string;
   }): Promise<any> {
     return this.client.request({
-      url: '/v1/categories',
+      url: 'https://mybusinessbusinessinformation.googleapis.com/v1/categories',
       method: 'GET',
       query: options,
     });
@@ -32,12 +33,28 @@ export class CategoriesService {
     view?: string;
     pageToken?: string;
   }): Promise<any> {
-    // Note: GBP API might not have a direct v1/categories:search endpoint or might use standard REST search pattern
-    // Using the common pattern for Google APIs.
-    return this.client.request({
-      url: '/v1/categories',
+    const query: any = { ...options };
+
+    if (options.searchTerm) {
+      const firstWord = options.searchTerm.split(' ')[0];
+      query.filter = `displayName=${firstWord}`;
+      delete query.searchTerm;
+    }
+
+    const response = await this.client.request({
+      url: 'https://mybusinessbusinessinformation.googleapis.com/v1/categories',
       method: 'GET',
-      query: options, // Assuming the standard list endpoint supports filtering by searchTerm or similar
+      query: query,
     });
+
+    // In-memory refinement to handle multi-word searches like "petrol pump"
+    if (options.searchTerm && response.categories) {
+      const searchLower = options.searchTerm.toLowerCase();
+      response.categories = response.categories.filter((cat: any) =>
+        cat.displayName?.toLowerCase().includes(searchLower)
+      );
+    }
+
+    return response;
   }
 }

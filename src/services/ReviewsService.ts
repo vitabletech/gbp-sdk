@@ -1,5 +1,6 @@
 import { HttpClient } from '../http/HttpClient';
 import { AutoPaginator } from '../utils/AutoPaginator';
+import { CursorPaginator } from '../utils/CursorPaginator';
 
 export class ReviewsService {
   private client: HttpClient;
@@ -43,6 +44,23 @@ export class ReviewsService {
       this.client,
       `https://mybusiness.googleapis.com/v4/${parent}/reviews`,
       'reviews'
+    );
+  }
+
+  /**
+   * Returns a paginator object to manually fetch reviews page by page.
+   */
+  public listPaginator(
+    accountId: string,
+    locationId: string,
+    options: { pageSize?: number } = {}
+  ): CursorPaginator<any> {
+    const parent = this.getParentName(accountId, locationId);
+    return new CursorPaginator(
+      this.client,
+      `https://mybusiness.googleapis.com/v4/${parent}/reviews`,
+      'reviews',
+      options
     );
   }
 
