@@ -72,6 +72,9 @@ export class FileTokenStorage implements TokenStorage {
 
   async setRefreshToken(token: string): Promise<void> {
     await this.loadFromFile();
+    if (this.memoryCache.refreshToken === token) {
+      return;
+    }
     this.memoryCache.refreshToken = token;
     await this.saveToFile();
   }

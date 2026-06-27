@@ -12,7 +12,7 @@ import { SilentLogger } from '../utils/Logger';
 
 export class HttpClient {
   private tokenManager: TokenManager;
-  private logger: Logger;
+  public logger: Logger;
   private retryPolicy: RetryPolicy;
   private defaultTimeoutMs: number;
   private defaultBaseUrl = 'https://mybusiness.googleapis.com';

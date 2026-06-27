@@ -13,7 +13,7 @@ export class AccountsService {
    */
   public async list(options?: { pageToken?: string }): Promise<any> {
     return this.client.request({
-      url: '/v1/accounts',
+      url: 'https://mybusinessaccountmanagement.googleapis.com/v1/accounts',
       method: 'GET',
       query: options,
     });
@@ -23,7 +23,11 @@ export class AccountsService {
    * Automatically fetches all accounts, handling pagination internally.
    */
   public async listAll(): Promise<any[]> {
-    return AutoPaginator.fetchAll(this.client, '/v1/accounts', 'accounts');
+    return AutoPaginator.fetchAll(
+      this.client,
+      'https://mybusinessaccountmanagement.googleapis.com/v1/accounts',
+      'accounts'
+    );
   }
 
   /**
@@ -31,7 +35,7 @@ export class AccountsService {
    */
   public async get(accountId: string): Promise<any> {
     return this.client.request({
-      url: `/v1/${accountId}`,
+      url: `https://mybusinessaccountmanagement.googleapis.com/v1/${accountId}`,
       method: 'GET',
     });
   }

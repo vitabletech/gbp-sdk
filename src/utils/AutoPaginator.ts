@@ -30,6 +30,12 @@ export class AutoPaginator {
       const items = response[itemsKey] || [];
       allItems = allItems.concat(items);
 
+      if (items.length > 0) {
+        client.logger.info(
+          `AutoPaginator: Fetched ${items.length} items from ${endpoint} (Total so far: ${allItems.length})`
+        );
+      }
+
       pageToken = response.nextPageToken;
     } while (pageToken);
 

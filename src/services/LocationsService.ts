@@ -13,13 +13,18 @@ export class LocationsService {
    */
   public async list(
     accountId: string,
-    options?: { pageToken?: string; readMask?: string }
+    options: { pageToken?: string; readMask?: string } = {}
   ): Promise<any> {
     const parent = accountId.startsWith('accounts/')
       ? accountId
       : `accounts/${accountId}`;
+    if (!options.readMask) {
+      options.readMask =
+        'name,title,storeCode,websiteUri,phoneNumbers,regularHours';
+    }
+
     return this.client.request({
-      url: `/v1/${parent}/locations`,
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${parent}/locations`,
       method: 'GET',
       query: options,
     });
@@ -30,14 +35,14 @@ export class LocationsService {
    */
   public async listAll(
     accountId: string,
-    readMask: string = 'name,title'
+    readMask: string = 'name,title,storeCode,websiteUri,phoneNumbers,regularHours'
   ): Promise<any[]> {
     const parent = accountId.startsWith('accounts/')
       ? accountId
       : `accounts/${accountId}`;
     return AutoPaginator.fetchAll(
       this.client,
-      `/v1/${parent}/locations`,
+      `https://mybusinessbusinessinformation.googleapis.com/v1/${parent}/locations`,
       'locations',
       { readMask }
     );
@@ -51,7 +56,7 @@ export class LocationsService {
       ? locationId
       : `locations/${locationId}`;
     return this.client.request({
-      url: `/v1/${name}`,
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
       method: 'GET',
     });
   }
@@ -96,7 +101,7 @@ export class LocationsService {
 
     // 3. Make API request
     return this.client.request({
-      url: `/v1/${parent}/locations`,
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${parent}/locations`,
       method: 'POST',
       body: data,
       query: {
@@ -120,7 +125,7 @@ export class LocationsService {
       ? locationId
       : `locations/${locationId}`;
     return this.client.request({
-      url: `/v1/${name}`,
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
       method: 'PATCH',
       query: { updateMask },
       body: data,
@@ -135,7 +140,7 @@ export class LocationsService {
       ? locationId
       : `locations/${locationId}`;
     await this.client.request({
-      url: `/v1/${name}`,
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
       method: 'DELETE',
     });
   }
