@@ -14,4 +14,5 @@ pnpm-debug.log*
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 *.log
-npm-package-docsgbp-tokens.json
+npm-package-docs
+gbp-tokens.json
