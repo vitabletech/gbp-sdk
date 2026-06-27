@@ -11,7 +11,7 @@ export default defineConfig({
   title: "GBP SDK",
   description: "Enterprise-grade Google Business Profile (GBP) SDK for Node.js",
   
-  // SEO Metadata
+  // SEO Metadata & Favicon
   head: [
     ['meta', { name: 'theme-color', content: '#3b82f6' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -19,7 +19,12 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'Enterprise-grade Google Business Profile (GBP) SDK for Node.js. Automatic OAuth refresh, auto-pagination, and full TypeScript support.' }],
     ['meta', { property: 'og:image', content: '/hero-graphic.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'keywords', content: 'Google Business Profile, GBP, API, SDK, Node.js, TypeScript, Google My Business, OAuth2' }]
+    ['meta', { name: 'keywords', content: 'Google Business Profile, GBP, API, SDK, Node.js, TypeScript, Google My Business, OAuth2' }],
+    ['link', { rel: 'icon', href: '/favicon/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' }],
+    ['link', { rel: 'manifest', href: '/favicon/site.webmanifest' }]
   ],
 
   // Sitemap Generation (Requires hostname)

@@ -1,0 +1,109 @@
+/* Custom VitePress Theme Styles */
+
+:root {
+  /* Brand colors matching standard GBP / Google vibes + modern gradient */
+  --vp-c-brand: #3b82f6;
+  --vp-c-brand-light: #60a5fa;
+  --vp-c-brand-lighter: #93c5fd;
+  --vp-c-brand-dark: #2563eb;
+  --vp-c-brand-darker: #1d4ed8;
+
+  /* Gradient text for the main Hero name */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #2563eb 0%,
+    #9333ea 100%
+  );
+
+  /* Glowing background behind the hero image */
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.4) 0%,
+    rgba(147, 51, 234, 0.4) 100%
+  );
+  --vp-home-hero-image-filter: blur(60px);
+}
+
+/* Subtle gradient background for the entire page body */
+body {
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(147, 51, 234, 0.08) 0%,
+      transparent 50%
+    );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Dark mode overrides */
+.dark {
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #60a5fa 0%,
+    #c084fc 100%
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(96, 165, 250, 0.3) 0%,
+    rgba(192, 132, 252, 0.3) 100%
+  );
+}
+
+.dark body {
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(59, 130, 246, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(147, 51, 234, 0.15) 0%,
+      transparent 50%
+    );
+}
+
+/* Increase the hero image size */
+.VPHero .image-container {
+  max-width: 600px !important; /* Increase from default */
+  width: 120% !important; /* Make it overflow its container slightly */
+  transform: translateX(-10%); /* Re-center it */
+}
+
+@media (min-width: 960px) {
+  .VPHero .image-container {
+    max-width: 800px !important;
+    width: 140% !important;
+    transform: translateX(-15%);
+  }
+}
+
+.VPHero .image-src {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Make action buttons pop */
+.VPButton.brand {
+  background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%);
+  border-color: transparent;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.VPButton.brand:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #6b21a8 100%);
+  opacity: 0.95;
+  transform: translateY(-2px);
+  border-color: transparent;
+}

@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "Google Business Profile SDK"
-  text: "The most complete TypeScript SDK for the Google Business Profile APIs."
-  tagline: "✔ Automatic OAuth Refresh • ✔ TypeScript First • ✔ Auto Pagination • ✔ Retry Support • ✔ Rate Limiting • ✔ Generic Request API • ✔ Enterprise Ready"
+  name: 'Google Business Profile SDK'
+  text: 'The most complete TypeScript SDK for the Google Business Profile APIs.'
+  tagline: '✔ Automatic OAuth Refresh • ✔ TypeScript First • ✔ Auto Pagination • ✔ Retry Support • ✔ Rate Limiting • ✔ Generic Request API • ✔ Enterprise Ready'
   image:
-    src: /hero-graphic.png
+    src: /hero-graphic.webp
     alt: GBP SDK Hero Image
   actions:
     - theme: brand
@@ -39,9 +39,11 @@ features:
 ## Quick Installation
 
 ::: code-group
+
 ```bash [npm]
 npm install @vitabletech/gbp-sdk
 ```
+
 :::
 
 ## Quick Example
@@ -50,14 +52,13 @@ npm install @vitabletech/gbp-sdk
 import { GBPClient } from '@vitabletech/gbp-sdk';
 
 const client = new GBPClient({
-    clientId: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    redirectUri: 'http://localhost:3000/oauth/callback',
-    refreshToken: process.env.GOOGLE_REFRESH_TOKEN
+  clientId: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  redirectUri: 'http://localhost:3000/oauth/callback',
+  refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
 });
 
-// Automatically handles tokens, paginates through all pages, 
+// Automatically handles tokens, paginates through all pages,
 // and returns all accounts as a strongly typed array.
 const accounts = await client.accounts.listAll();
 ```
-
