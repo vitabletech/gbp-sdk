@@ -11,7 +11,7 @@ import { MediaService } from '../services/MediaService';
 export class GBPClient {
   private tokenManager: TokenManager;
   private httpClient: HttpClient;
-  
+
   public accounts: AccountsService;
   public locations: LocationsService;
   public reviews: ReviewsService;
@@ -54,7 +54,9 @@ export class GBPClient {
    * Generates the OAuth 2.0 authorization URL for user consent.
    */
   public getAuthorizationUrl(scopes: string[], state?: string): string {
-    return this.tokenManager.getOAuthClient().getAuthorizationUrl(scopes, state);
+    return this.tokenManager
+      .getOAuthClient()
+      .getAuthorizationUrl(scopes, state);
   }
 
   /**

@@ -1,5 +1,4 @@
 import { HttpClient } from '../http/HttpClient';
-import { AutoPaginator } from '../utils/AutoPaginator';
 
 export class PostsService {
   private client: HttpClient;
@@ -11,7 +10,10 @@ export class PostsService {
   /**
    * Lists all local posts for a location.
    */
-  public async list(locationId: string, options?: { pageToken?: string }): Promise<any> {
+  public async list(
+    locationId: string,
+    options?: { pageToken?: string }
+  ): Promise<any> {
     return this.client.request({
       url: `/v1/${locationId}/localPosts`,
       method: 'GET',
@@ -43,7 +45,12 @@ export class PostsService {
   /**
    * Updates an existing local post.
    */
-  public async patch(locationId: string, localPostId: string, data: any, updateMask: string): Promise<any> {
+  public async patch(
+    locationId: string,
+    localPostId: string,
+    data: any,
+    updateMask: string
+  ): Promise<any> {
     return this.client.request({
       url: `/v1/${locationId}/localPosts/${localPostId}`,
       method: 'PATCH',

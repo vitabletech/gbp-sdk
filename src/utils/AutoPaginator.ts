@@ -29,7 +29,7 @@ export class AutoPaginator {
 
       const items = response[itemsKey] || [];
       allItems = allItems.concat(items);
-      
+
       pageToken = response.nextPageToken;
     } while (pageToken);
 

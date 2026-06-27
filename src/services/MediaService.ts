@@ -1,5 +1,4 @@
 import { HttpClient } from '../http/HttpClient';
-import { AutoPaginator } from '../utils/AutoPaginator';
 
 export class MediaService {
   private client: HttpClient;
@@ -11,7 +10,10 @@ export class MediaService {
   /**
    * Lists all media items for a location.
    */
-  public async list(locationId: string, options?: { pageToken?: string }): Promise<any> {
+  public async list(
+    locationId: string,
+    options?: { pageToken?: string }
+  ): Promise<any> {
     return this.client.request({
       url: `/v1/${locationId}/media`,
       method: 'GET',

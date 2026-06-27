@@ -7,7 +7,7 @@ export class MemoryTokenStorage implements TokenStorage {
 
   async getToken(): Promise<string | null> {
     if (!this.accessToken) return null;
-    
+
     // Buffer of 60 seconds
     if (this.expiresAt && Date.now() >= this.expiresAt - 60000) {
       return null;

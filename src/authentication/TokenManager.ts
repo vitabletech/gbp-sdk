@@ -15,7 +15,7 @@ export class TokenManager {
     this.logger = config.logger || new SilentLogger();
     this.oauthClient = new OAuthClient(config);
     this.storage = this.initializeStorage(config);
-    
+
     if (config.refreshToken) {
       this.storage.setRefreshToken(config.refreshToken);
     }
@@ -36,14 +36,16 @@ export class TokenManager {
   }
 
   public async getAccessToken(): Promise<string> {
-    let token = await this.storage.getToken();
+    const token = await this.storage.getToken();
     if (token) {
       return token;
     }
 
     const refreshToken = await this.storage.getRefreshToken();
     if (!refreshToken) {
-      throw new AuthenticationError('No access token available and no refresh token found to generate a new one.');
+      throw new AuthenticationError(
+        'No access token available and no refresh token found to generate a new one.'
+      );
     }
 
     return this.refreshAccessToken(refreshToken);
@@ -85,12 +87,14 @@ export class TokenManager {
     const token = await this.getAccessToken();
     const response = await fetch('https://oauth2.googleapis.com/tokeninfo', {
       headers: {
-        'Authorization': `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     if (!response.ok) {
-      throw new AuthenticationError(`Failed to fetch token info: ${response.statusText}`);
+      throw new AuthenticationError(
+        `Failed to fetch token info: ${response.statusText}`
+      );
     }
 
     return response.json();

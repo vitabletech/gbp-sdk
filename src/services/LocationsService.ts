@@ -11,8 +11,13 @@ export class LocationsService {
   /**
    * Lists all locations for a specific account.
    */
-  public async list(accountId: string, options?: { pageToken?: string, readMask?: string }): Promise<any> {
-    const parent = accountId.startsWith('accounts/') ? accountId : `accounts/${accountId}`;
+  public async list(
+    accountId: string,
+    options?: { pageToken?: string; readMask?: string }
+  ): Promise<any> {
+    const parent = accountId.startsWith('accounts/')
+      ? accountId
+      : `accounts/${accountId}`;
     return this.client.request({
       url: `/v1/${parent}/locations`,
       method: 'GET',
@@ -23,16 +28,28 @@ export class LocationsService {
   /**
    * Automatically fetches all locations for an account.
    */
-  public async listAll(accountId: string, readMask: string = 'name,title'): Promise<any[]> {
-    const parent = accountId.startsWith('accounts/') ? accountId : `accounts/${accountId}`;
-    return AutoPaginator.fetchAll(this.client, `/v1/${parent}/locations`, 'locations', { readMask });
+  public async listAll(
+    accountId: string,
+    readMask: string = 'name,title'
+  ): Promise<any[]> {
+    const parent = accountId.startsWith('accounts/')
+      ? accountId
+      : `accounts/${accountId}`;
+    return AutoPaginator.fetchAll(
+      this.client,
+      `/v1/${parent}/locations`,
+      'locations',
+      { readMask }
+    );
   }
 
   /**
    * Gets a specific location by ID.
    */
   public async get(locationId: string): Promise<any> {
-    const name = locationId.startsWith('locations/') ? locationId : `locations/${locationId}`;
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
     return this.client.request({
       url: `/v1/${name}`,
       method: 'GET',
@@ -42,41 +59,66 @@ export class LocationsService {
   /**
    * Creates a new location.
    */
-  public async create(accountId: string, data: any, options?: { validateOnly?: boolean; requestId?: string }): Promise<any> {
+  public async create(
+    accountId: string,
+    data: any,
+    options?: { validateOnly?: boolean; requestId?: string }
+  ): Promise<any> {
     // 1. Payload Validation
     if (!data.title) {
-      throw new Error("Validation Error: 'title' is required to create a location.");
+      throw new Error(
+        "Validation Error: 'title' is required to create a location."
+      );
     }
     if (!data.languageCode) {
-      throw new Error("Validation Error: 'languageCode' is required to create a location.");
+      throw new Error(
+        "Validation Error: 'languageCode' is required to create a location."
+      );
     }
     if (!data.storefrontAddress && !data.serviceArea) {
-      throw new Error("Validation Error: At least one of 'storefrontAddress' or 'serviceArea' is required.");
+      throw new Error(
+        "Validation Error: At least one of 'storefrontAddress' or 'serviceArea' is required."
+      );
     }
-    if (!data.storefrontAddress && !(data.phoneNumbers?.primaryPhone || data.websiteUri)) {
-      throw new Error("Validation Error: At least one of 'phoneNumbers.primaryPhone' or 'websiteUri' is required when 'storefrontAddress' is not present.");
+    if (
+      !data.storefrontAddress &&
+      !(data.phoneNumbers?.primaryPhone || data.websiteUri)
+    ) {
+      throw new Error(
+        "Validation Error: At least one of 'phoneNumbers.primaryPhone' or 'websiteUri' is required when 'storefrontAddress' is not present."
+      );
     }
 
     // 2. Normalize endpoint URL
-    const parent = accountId.startsWith('accounts/') ? accountId : `accounts/${accountId}`;
-    
+    const parent = accountId.startsWith('accounts/')
+      ? accountId
+      : `accounts/${accountId}`;
+
     // 3. Make API request
     return this.client.request({
       url: `/v1/${parent}/locations`,
       method: 'POST',
       body: data,
       query: {
-        ...(options?.validateOnly !== undefined && { validateOnly: options.validateOnly }),
-        ...(options?.requestId && { requestId: options.requestId })
-      }
+        ...(options?.validateOnly !== undefined && {
+          validateOnly: options.validateOnly,
+        }),
+        ...(options?.requestId && { requestId: options.requestId }),
+      },
     });
   }
 
   /**
    * Updates an existing location.
    */
-  public async patch(locationId: string, data: any, updateMask: string): Promise<any> {
-    const name = locationId.startsWith('locations/') ? locationId : `locations/${locationId}`;
+  public async patch(
+    locationId: string,
+    data: any,
+    updateMask: string
+  ): Promise<any> {
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
     return this.client.request({
       url: `/v1/${name}`,
       method: 'PATCH',
@@ -89,7 +131,9 @@ export class LocationsService {
    * Deletes a location.
    */
   public async delete(locationId: string): Promise<void> {
-    const name = locationId.startsWith('locations/') ? locationId : `locations/${locationId}`;
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
     await this.client.request({
       url: `/v1/${name}`,
       method: 'DELETE',

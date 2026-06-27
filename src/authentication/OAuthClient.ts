@@ -12,11 +12,14 @@ export class OAuthClient {
 
   constructor(config: GBPClientConfig) {
     if (!config.clientId || !config.clientSecret) {
-      throw new AuthenticationError('clientId and clientSecret are required for OAuthClient');
+      throw new AuthenticationError(
+        'clientId and clientSecret are required for OAuthClient'
+      );
     }
     this.clientId = config.clientId;
     this.clientSecret = config.clientSecret;
-    this.redirectUri = config.redirectUri || 'http://localhost:3000/oauth2callback';
+    this.redirectUri =
+      config.redirectUri || 'http://localhost:3000/oauth2callback';
     this.logger = config.logger || new SilentLogger();
   }
 
@@ -27,13 +30,13 @@ export class OAuthClient {
       response_type: 'code',
       scope: scopes.join(' '),
       access_type: 'offline',
-      prompt: 'consent'
+      prompt: 'consent',
     });
-    
+
     if (state) {
       params.append('state', state);
     }
-    
+
     return `${this.authEndpoint}?${params.toString()}`;
   }
 
@@ -81,10 +84,13 @@ export class OAuthClient {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new AuthenticationError(`Failed to fetch tokens: ${data.error_description || data.error || response.statusText}`, {
-          responseBody: data,
-          status: response.status
-        });
+        throw new AuthenticationError(
+          `Failed to fetch tokens: ${data.error_description || data.error || response.statusText}`,
+          {
+            responseBody: data,
+            status: response.status,
+          }
+        );
       }
 
       return data;

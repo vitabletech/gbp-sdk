@@ -22,7 +22,7 @@ export class GBPApiError extends Error {
     this.url = options?.url;
     this.method = options?.method;
     this.responseBody = options?.responseBody;
-    
+
     // Set prototype explicitly for built-in Error subclassing in TS
     Object.setPrototypeOf(this, GBPApiError.prototype);
   }

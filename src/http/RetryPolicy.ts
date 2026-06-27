@@ -22,10 +22,10 @@ export class RetryPolicy {
   public getDelay(retryCount: number): number {
     // Exponential backoff
     const delay = this.baseDelayMs * Math.pow(2, retryCount);
-    
+
     // Add jitter (randomized 0-20% extra delay)
     const jitter = delay * 0.2 * Math.random();
-    
+
     const finalDelay = delay + jitter;
     return Math.min(finalDelay, this.maxDelayMs);
   }

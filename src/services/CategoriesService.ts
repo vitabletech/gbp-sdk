@@ -1,5 +1,4 @@
 import { HttpClient } from '../http/HttpClient';
-import { AutoPaginator } from '../utils/AutoPaginator';
 
 export class CategoriesService {
   private client: HttpClient;
@@ -11,7 +10,11 @@ export class CategoriesService {
   /**
    * Returns a list of business categories.
    */
-  public async list(options?: { languageCode?: string; view?: string; pageToken?: string }): Promise<any> {
+  public async list(options?: {
+    languageCode?: string;
+    view?: string;
+    pageToken?: string;
+  }): Promise<any> {
     return this.client.request({
       url: '/v1/categories',
       method: 'GET',
@@ -22,7 +25,13 @@ export class CategoriesService {
   /**
    * Searches for categories.
    */
-  public async search(options: { searchTerm?: string; languageCode?: string; regionCode?: string; view?: string; pageToken?: string }): Promise<any> {
+  public async search(options: {
+    searchTerm?: string;
+    languageCode?: string;
+    regionCode?: string;
+    view?: string;
+    pageToken?: string;
+  }): Promise<any> {
     // Note: GBP API might not have a direct v1/categories:search endpoint or might use standard REST search pattern
     // Using the common pattern for Google APIs.
     return this.client.request({

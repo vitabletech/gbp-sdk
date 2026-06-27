@@ -13,7 +13,7 @@ export class FileTokenStorage implements TokenStorage {
   private memoryCache: TokenData = {
     accessToken: null,
     refreshToken: null,
-    expiresAt: null
+    expiresAt: null,
   };
   private isLoaded = false;
 
@@ -36,15 +36,22 @@ export class FileTokenStorage implements TokenStorage {
   }
 
   private async saveToFile(): Promise<void> {
-    await fs.writeFile(this.filePath, JSON.stringify(this.memoryCache, null, 2), 'utf-8');
+    await fs.writeFile(
+      this.filePath,
+      JSON.stringify(this.memoryCache, null, 2),
+      'utf-8'
+    );
   }
 
   async getToken(): Promise<string | null> {
     await this.loadFromFile();
     if (!this.memoryCache.accessToken) return null;
-    
+
     // Buffer of 60 seconds
-    if (this.memoryCache.expiresAt && Date.now() >= this.memoryCache.expiresAt - 60000) {
+    if (
+      this.memoryCache.expiresAt &&
+      Date.now() >= this.memoryCache.expiresAt - 60000
+    ) {
       return null;
     }
 
@@ -73,7 +80,7 @@ export class FileTokenStorage implements TokenStorage {
     this.memoryCache = {
       accessToken: null,
       refreshToken: null,
-      expiresAt: null
+      expiresAt: null,
     };
     await this.saveToFile();
   }
