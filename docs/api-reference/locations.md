@@ -59,7 +59,7 @@ Returns an array of `Location` objects.
 #### Purpose
 Fetches a single specific location by its resource name. Google APIs use a `readMask` parameter to limit which fields are returned, reducing bandwidth. 
 
-If you do not provide a `readMask`, the SDK automatically sets a sensible default (`name,title`).
+If you do not provide a `readMask`, the SDK automatically sets a sensible default (`name,title,storeCode,websiteUri,phoneNumbers,regularHours`). Any whitespace in your `readMask` is also automatically stripped out so you never hit invalid argument errors.
 
 **Common `readMask` Fields:**
 You can pass a comma-separated list of any of the following fields:
@@ -113,7 +113,7 @@ async client.locations.create(
 | --- | --- | --- | --- |
 | `accountId` | `string` | Yes | The ID of the account to create the location under (e.g. `accounts/123456`) |
 | `data` | `object` | Yes | The location data payload containing `title`, `languageCode`, `storefrontAddress`, etc. |
-| `options.validateOnly` | `boolean` | No | If true, the request is validated by Google without actually creating the location. |
+| `options.validateOnly` | `boolean` | No | If true, the request is validated by Google without actually creating the location. Defaults to `true` to prevent accidental creation in production. Set to `false` to actually create a location. |
 | `options.requestId` | `string` | No | A unique request ID (like a UUID) for the server to detect duplicated requests. |
 
 ### `patch(locationId, data, updateMask)`

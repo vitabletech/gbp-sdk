@@ -42,6 +42,11 @@ async client.categories.search(options: {
 }): Promise<any>
 ```
 
+> [!TIP] Multi-word Search
+> Google's raw Business Profile API has a known bug where searching for multi-word strings in the filter (like `petrol pump`) will either crash or ignore the filter entirely. 
+> 
+> Our SDK automatically intercepts your `searchTerm`, passes the first word to Google to fetch a small subset, and performs the rest of the multi-word matching in-memory. This guarantees you will always get accurate results for complex queries without having to write your own filter workaround!
+
 #### Request Example
 ```typescript
 const response = await client.categories.search({

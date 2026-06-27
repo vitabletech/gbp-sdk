@@ -1,6 +1,12 @@
 # @vitabletech/gbp-sdk
 
-Enterprise-grade Google Business Profile (GBP) SDK for Node.js.
+Enterprise-grade Google Business Profile (GBP) SDK for Node.js, Next.js, and TypeScript.
+
+![NPM Version](https://img.shields.io/npm/v/@vitabletech/gbp-sdk)
+![License](https://img.shields.io/npm/l/@vitabletech/gbp-sdk)
+![TypeScript](https://img.shields.io/npm/types/@vitabletech/gbp-sdk)
+
+> **📖 Full Documentation:** [https://gbp.vitabletech.in](https://gbp.vitabletech.in)
 
 ## Features
 

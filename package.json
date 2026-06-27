@@ -36,9 +36,27 @@
     "gbp",
     "sdk",
     "api",
-    "node"
+    "node",
+    "typescript",
+    "react",
+    "nextjs",
+    "oauth2",
+    "google-my-business",
+    "gmb"
   ],
-  "author": "",
+  "author": "Mayank Singh kushwah (https://vitabletech.in)",
+  "homepage": "https://gbp.vitabletech.in",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitabletech/gbp-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitabletech/gbp-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^18.6.1",

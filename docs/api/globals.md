@@ -6,6 +6,7 @@
 
 - [AuthenticationError](classes/AuthenticationError.md)
 - [ConsoleLogger](classes/ConsoleLogger.md)
+- [CursorPaginator](classes/CursorPaginator.md)
 - [FileTokenStorage](classes/FileTokenStorage.md)
 - [GBPApiError](classes/GBPApiError.md)
 - [GBPClient](classes/GBPClient.md)
