@@ -69,19 +69,19 @@ When using `client.locations.create()`, you must pass a valid location object. H
   },
   "categories": {
     "primaryCategory": {
-      "name": "categories/gcid:software_company"
+      "name": "categories/gcid:airport"
     }
   },
   "storefrontAddress": {
     "regionCode": "IN",
-    "postalCode": "302001",
-    "administrativeArea": "Rajasthan",
-    "locality": "Jaipur",
-    "addressLines": ["Software Park", "C-Scheme"]
+    "postalCode": "123456",
+    "administrativeArea": "State Name",
+    "locality": "City Name",
+    "addressLines": ["Address Line 1", "Address Line 2"]
   },
   "latlng": {
-    "latitude": 24.521721,
-    "longitude": 72.519443
+    "latitude": 34.521721,
+    "longitude": 92.519443
   },
   "websiteUri": "https://www.yourwebsite.in",
   "regularHours": {
@@ -131,7 +131,7 @@ When using `client.locations.create()`, you must pass a valid location object. H
     ]
   },
   "profile": {
-    "description": "Your Shop description."
+    "description": "Your RO - Retail Outlet."
   }
 }
 ```

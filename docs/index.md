@@ -46,6 +46,12 @@ npm install @vitabletech/gbp-sdk
 
 :::
 
+## What's New in v0.2.0 🎉
+
+- **Native Location Attributes**: Added native `getAttributes` and `patchAttributes` support to `LocationsService`. Manage location amenities and flags effortlessly.
+- **Enhanced Media Uploads**: Upgraded `MediaService` to fully support Google's v4 endpoints by allowing direct `accountId` binding.
+- **Network Whitelisting**: Added comprehensive [Network Whitelist](/advanced/network-whitelist) documentation to help enterprise IT teams unblock necessary domains.
+
 ## Quick Example
 
 ```typescript

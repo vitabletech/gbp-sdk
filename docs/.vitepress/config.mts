@@ -124,7 +124,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Architecture', link: '/advanced/architecture' },
-          { text: 'Comparison vs Fetch', link: '/advanced/comparison' }
+          { text: 'Comparison vs Fetch', link: '/advanced/comparison' },
+          { text: 'Network Whitelist', link: '/advanced/network-whitelist' }
         ]
       }
     ],
