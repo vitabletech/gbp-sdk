@@ -1,6 +1,6 @@
 **@vitabletech/gbp-sdk**
 
-***
+---
 
 # @vitabletech/gbp-sdk
 
@@ -62,28 +62,28 @@ When using `client.locations.create()`, you must pass a valid location object. H
 ```json
 {
   "languageCode": "en",
-  "title": "MAA ANJANI PETROLEUM SERVICE",
-  "storeCode": "179280",
+  "title": "Your Shop Name",
+  "storeCode": "1234567",
   "phoneNumbers": {
-    "primaryPhone": "+919782835399"
+    "primaryPhone": "+9112345678902"
   },
   "categories": {
     "primaryCategory": {
-      "name": "categories/gcid:gas_station"
+      "name": "categories/gcid:software_company"
     }
   },
   "storefrontAddress": {
     "regionCode": "IN",
-    "postalCode": "307514",
+    "postalCode": "302001",
     "administrativeArea": "Rajasthan",
-    "locality": "Udaipur",
-    "addressLines": ["BHARAT PETROLEUM DEALERS", "V&PO BHATANA"]
+    "locality": "Jaipur",
+    "addressLines": ["Software Park", "C-Scheme"]
   },
   "latlng": {
     "latitude": 24.521721,
     "longitude": 72.519443
   },
-  "websiteUri": "https://www.bharatpetroleum.in",
+  "websiteUri": "https://www.yourwebsite.in",
   "regularHours": {
     "periods": [
       {
@@ -131,7 +131,7 @@ When using `client.locations.create()`, you must pass a valid location object. H
     ]
   },
   "profile": {
-    "description": "Bharat Petroleum retail outlet."
+    "description": "Your Shop description."
   }
 }
 ```
