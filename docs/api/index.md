@@ -1,6 +1,6 @@
 **@vitabletech/gbp-sdk**
 
-***
+---
 
 # @vitabletech/gbp-sdk
 
@@ -26,6 +26,19 @@ Enterprise-grade Google Business Profile (GBP) SDK for Node.js, Next.js, and Typ
 ```bash
 npm install @vitabletech/gbp-sdk
 ```
+
+## Network Whitelist
+
+If you are running this SDK behind a strict corporate firewall, please ensure you whitelist the necessary Google API domains. See the [Network Whitelist Documentation](_media/network-whitelist.md) for the complete list of domains and URLs.
+
+## What's New in v1.0.0 🎉
+
+- **Native Location Attributes**: Added native `getAttributes` and `patchAttributes` support to `LocationsService`.
+- **Enhanced Media Uploads**: Upgraded `MediaService` to fully support Google's v4 endpoints by allowing direct `accountId` binding.
+- **Verifications API**: Added full native support for the `mybusinessverifications.googleapis.com` API via the new `VerificationsService`.
+- **Chains API**: Find global brands and associate your locations with them easily via `ChainsService`.
+- **Network Whitelisting**: Added comprehensive network whitelist documentation for enterprise users.
+- **Food Menus & Metrics Types**: Added complete, strict TypeScript interfaces for the Google Business Profile `FoodMenus` and `Metrics` APIs.
 
 ## Quick Start
 
@@ -62,28 +75,28 @@ When using `client.locations.create()`, you must pass a valid location object. H
 ```json
 {
   "languageCode": "en",
-  "title": "MAA ANJANI PETROLEUM SERVICE",
-  "storeCode": "179280",
+  "title": "Your Shop Name",
+  "storeCode": "1234567",
   "phoneNumbers": {
-    "primaryPhone": "+919782835399"
+    "primaryPhone": "+9112345678902"
   },
   "categories": {
     "primaryCategory": {
-      "name": "categories/gcid:gas_station"
+      "name": "categories/gcid:airport"
     }
   },
   "storefrontAddress": {
     "regionCode": "IN",
-    "postalCode": "307514",
-    "administrativeArea": "Rajasthan",
-    "locality": "Udaipur",
-    "addressLines": ["BHARAT PETROLEUM DEALERS", "V&PO BHATANA"]
+    "postalCode": "123456",
+    "administrativeArea": "State Name",
+    "locality": "City Name",
+    "addressLines": ["Address Line 1", "Address Line 2"]
   },
   "latlng": {
-    "latitude": 24.521721,
-    "longitude": 72.519443
+    "latitude": 34.521721,
+    "longitude": 92.519443
   },
-  "websiteUri": "https://www.bharatpetroleum.in",
+  "websiteUri": "https://www.yourwebsite.in",
   "regularHours": {
     "periods": [
       {
@@ -131,7 +144,7 @@ When using `client.locations.create()`, you must pass a valid location object. H
     ]
   },
   "profile": {
-    "description": "Bharat Petroleum retail outlet."
+    "description": "Your RO - Retail Outlet."
   }
 }
 ```

@@ -179,4 +179,36 @@ export class LocationsService {
       method: 'DELETE',
     });
   }
+
+  /**
+   * Gets attributes for a location.
+   */
+  public async getAttributes(locationId: string): Promise<any> {
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
+    return this.client.request({
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}/attributes`,
+      method: 'GET',
+    });
+  }
+
+  /**
+   * Updates attributes for a location.
+   */
+  public async patchAttributes(
+    locationId: string,
+    data: any,
+    attributeMask: string
+  ): Promise<any> {
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
+    return this.client.request({
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}/attributes`,
+      method: 'PATCH',
+      query: { attributeMask },
+      body: data,
+    });
+  }
 }

@@ -8,8 +8,11 @@ const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'))
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "GBP SDK",
+  title: "Google Business Profile SDK",
   description: "Enterprise-grade Google Business Profile (GBP) SDK for Node.js",
+
+  // SEO: Removes .html from URLs for cleaner indexing
+  cleanUrls: true,
 
   // Set default theme to dark
   appearance: 'dark',
@@ -30,9 +33,9 @@ export default defineConfig({
     ['link', { rel: 'manifest', href: '/favicon/site.webmanifest' }]
   ],
 
-  // Sitemap Generation (Requires hostname)
+  // SEO: Sitemap Generation & Canonical URLs
   sitemap: {
-    hostname: 'https://vitabletech.in' // Replace with your actual documentation domain before deploying
+    hostname: 'https://gbp.vitabletech.in'
   },
 
   // Enable Multi-Language (i18n)
@@ -85,11 +88,12 @@ export default defineConfig({
         text: 'Guides',
         collapsed: false,
         items: [
-          { text: 'Token Storage', link: '/guides/token-storage' },
           { text: 'Pagination', link: '/guides/pagination' },
-          { text: 'Rate Limiting & Retries', link: '/guides/rate-limiting' },
           { text: 'Custom Requests', link: '/guides/custom-requests' },
-          { text: 'Error Handling', link: '/guides/error-handling' }
+          { text: 'Error Handling', link: '/guides/error-handling' },
+          { text: 'Rate Limiting', link: '/guides/rate-limiting' },
+          { text: 'Token Storage', link: '/guides/token-storage' },
+          { text: 'FAQ & Behaviors', link: '/guides/faq' }
         ]
       },
       {
@@ -102,6 +106,10 @@ export default defineConfig({
           { text: 'Categories', link: '/api-reference/categories' },
           { text: 'Media', link: '/api-reference/media' },
           { text: 'Posts', link: '/api-reference/posts' },
+          { text: 'Verifications', link: '/api-reference/verifications' },
+          { text: 'Chains', link: '/api-reference/chains' },
+          { text: 'Food Menus (Types)', link: '/api-reference/food-menus' },
+          { text: 'Metrics (Types)', link: '/api-reference/metrics' },
           { text: 'Raw Types (Auto)', link: '/api/' }
         ]
       },
@@ -124,7 +132,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Architecture', link: '/advanced/architecture' },
-          { text: 'Comparison vs Fetch', link: '/advanced/comparison' }
+          { text: 'Comparison vs Fetch', link: '/advanced/comparison' },
+          { text: 'Network Whitelist', link: '/advanced/network-whitelist' }
         ]
       }
     ],

@@ -15,7 +15,7 @@ export class PostsService {
     options?: { pageToken?: string }
   ): Promise<any> {
     return this.client.request({
-      url: `/v1/${locationId}/localPosts`,
+      url: `/v4/${locationId}/localPosts`,
       method: 'GET',
       query: options,
     });
@@ -26,7 +26,7 @@ export class PostsService {
    */
   public async create(locationId: string, data: any): Promise<any> {
     return this.client.request({
-      url: `/v1/${locationId}/localPosts`,
+      url: `/v4/${locationId}/localPosts`,
       method: 'POST',
       body: data,
     });
@@ -37,7 +37,7 @@ export class PostsService {
    */
   public async get(locationId: string, localPostId: string): Promise<any> {
     return this.client.request({
-      url: `/v1/${locationId}/localPosts/${localPostId}`,
+      url: `/v4/${locationId}/localPosts/${localPostId}`,
       method: 'GET',
     });
   }
@@ -52,7 +52,7 @@ export class PostsService {
     updateMask: string
   ): Promise<any> {
     return this.client.request({
-      url: `/v1/${locationId}/localPosts/${localPostId}`,
+      url: `/v4/${locationId}/localPosts/${localPostId}`,
       method: 'PATCH',
       query: { updateMask },
       body: data,
@@ -64,7 +64,7 @@ export class PostsService {
    */
   public async delete(locationId: string, localPostId: string): Promise<void> {
     await this.client.request({
-      url: `/v1/${locationId}/localPosts/${localPostId}`,
+      url: `/v4/${locationId}/localPosts/${localPostId}`,
       method: 'DELETE',
     });
   }
