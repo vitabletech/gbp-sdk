@@ -67,6 +67,34 @@ const newMedia = await client.media.create(accountId, locationId, mediaData);
 console.log('Created media:', newMedia.name);
 ```
 
+### `patch(accountId, locationId, mediaKey, data, updateMask?)`
+
+#### Purpose
+
+Updates metadata of the specified media item. Note that this can typically only be used to update the Category of a media item, and the new category cannot be COVER or PROFILE.
+
+#### Syntax
+
+```typescript
+async client.media.patch(accountId: string, locationId: string, mediaKey: string, data: any, updateMask?: string): Promise<any>
+```
+
+#### Request Example
+
+```typescript
+const updatedMedia = await client.media.patch(
+  'accounts/123',
+  'locations/456',
+  'media/789',
+  {
+    locationAssociation: {
+      category: 'INTERIOR',
+    },
+  },
+  'locationAssociation.category'
+);
+```
+
 ### `delete(locationId, mediaKey)`
 
 #### Purpose

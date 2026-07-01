@@ -7,6 +7,9 @@ import { ReviewsService } from '../services/ReviewsService';
 import { CategoriesService } from '../services/CategoriesService';
 import { PostsService } from '../services/PostsService';
 import { MediaService } from '../services/MediaService';
+import { MetricsService } from '../services/MetricsService';
+import { VerificationsService } from '../services/VerificationsService';
+import { ChainsService } from '../services/ChainsService';
 
 export class GBPClient {
   private tokenManager: TokenManager;
@@ -18,6 +21,9 @@ export class GBPClient {
   public categories: CategoriesService;
   public posts: PostsService;
   public media: MediaService;
+  public metrics: MetricsService;
+  public verifications: VerificationsService;
+  public chains: ChainsService;
 
   constructor(config: GBPClientConfig) {
     this.tokenManager = new TokenManager(config);
@@ -30,6 +36,9 @@ export class GBPClient {
     this.categories = new CategoriesService(this.httpClient);
     this.posts = new PostsService(this.httpClient);
     this.media = new MediaService(this.httpClient);
+    this.metrics = new MetricsService(this.httpClient);
+    this.verifications = new VerificationsService(this.httpClient);
+    this.chains = new ChainsService(this.httpClient);
   }
 
   /**

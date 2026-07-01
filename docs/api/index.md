@@ -27,6 +27,19 @@ Enterprise-grade Google Business Profile (GBP) SDK for Node.js, Next.js, and Typ
 npm install @vitabletech/gbp-sdk
 ```
 
+## Network Whitelist
+
+If you are running this SDK behind a strict corporate firewall, please ensure you whitelist the necessary Google API domains. See the [Network Whitelist Documentation](_media/network-whitelist.md) for the complete list of domains and URLs.
+
+## What's New in v1.0.0 🎉
+
+- **Native Location Attributes**: Added native `getAttributes` and `patchAttributes` support to `LocationsService`.
+- **Enhanced Media Uploads**: Upgraded `MediaService` to fully support Google's v4 endpoints by allowing direct `accountId` binding.
+- **Verifications API**: Added full native support for the `mybusinessverifications.googleapis.com` API via the new `VerificationsService`.
+- **Chains API**: Find global brands and associate your locations with them easily via `ChainsService`.
+- **Network Whitelisting**: Added comprehensive network whitelist documentation for enterprise users.
+- **Food Menus & Metrics Types**: Added complete, strict TypeScript interfaces for the Google Business Profile `FoodMenus` and `Metrics` APIs.
+
 ## Quick Start
 
 ```typescript

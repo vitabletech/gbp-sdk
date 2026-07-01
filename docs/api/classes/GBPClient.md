@@ -1,6 +1,6 @@
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Constructors
 
@@ -24,35 +24,53 @@
 
 > **accounts**: `AccountsService`
 
-***
+---
 
 ### categories
 
 > **categories**: `CategoriesService`
 
-***
+---
+
+### chains
+
+> **chains**: `ChainsService`
+
+---
 
 ### locations
 
 > **locations**: `LocationsService`
 
-***
+---
 
 ### media
 
 > **media**: `MediaService`
 
-***
+---
+
+### metrics
+
+> **metrics**: `MetricsService`
+
+---
 
 ### posts
 
 > **posts**: `PostsService`
 
-***
+---
 
 ### reviews
 
 > **reviews**: `ReviewsService`
+
+---
+
+### verifications
+
+> **verifications**: `VerificationsService`
 
 ## Methods
 
@@ -76,11 +94,11 @@ Generates the OAuth 2.0 authorization URL for user consent.
 
 `string`
 
-***
+---
 
 ### getTokenInfo()
 
-> **getTokenInfo**(): `Promise`\<`any`\>
+> **getTokenInfo**(): `Promise`\<`any`>>\>
 
 Retrieves information about the current access token, such as its expiration time, scopes, and app ID.
 
@@ -88,11 +106,11 @@ Retrieves information about the current access token, such as its expiration tim
 
 `Promise`\<`any`\>
 
-***
+---
 
 ### processAuthCode()
 
-> **processAuthCode**(`code`): `Promise`\<`void`\>
+> **processAuthCode**(`code`): `Promise`\<`void`>>\>
 
 Processes an OAuth 2.0 authorization code to fetch and store tokens.
 
@@ -106,11 +124,11 @@ Processes an OAuth 2.0 authorization code to fetch and store tokens.
 
 `Promise`\<`void`\>
 
-***
+---
 
 ### request()
 
-> **request**\<`T`\>(`options`): `Promise`\<`T`\>
+> **request**\<`T`>>\>(`options`): `Promise`\<`T`>>\>
 
 Generic request method for unsupported or custom API endpoints.
 This allows developers to use newly released Google APIs immediately.

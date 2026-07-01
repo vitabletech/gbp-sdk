@@ -1,4 +1,5 @@
 export * from './types';
+export * from './models';
 export * from './errors/GBPApiError';
 export * from './utils/Logger';
 export * from './authentication/MemoryTokenStorage';
