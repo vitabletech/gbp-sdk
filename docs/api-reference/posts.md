@@ -50,10 +50,8 @@ Creates a new local post on the location.
 
 #### Syntax
 
-The request body contains an instance of LocalPost. [LocalPost](https://developers.google.com/my-business/reference/rest/v4/accounts.locations.localPosts#LocalPost)
-
 ```typescript
-async client.posts.create(locationId: string, data: LocalPost): Promise<any>
+async client.posts.create(locationId: string, data: any): Promise<any>
 ```
 
 #### Request Example
@@ -81,10 +79,8 @@ Updates an existing local post.
 
 #### Syntax
 
-The request body contains an instance of LocalPost. [LocalPost](https://developers.google.com/my-business/reference/rest/v4/accounts.locations.localPosts#LocalPost)
-
 ```typescript
-async client.posts.patch(locationId: string, localPostId: string, data: LocalPost, updateMask: string): Promise<any>
+async client.posts.patch(locationId: string, localPostId: string, data: any, updateMask: string): Promise<any>
 ```
 
 ### `delete(locationId, localPostId)`
