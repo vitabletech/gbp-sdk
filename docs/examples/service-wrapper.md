@@ -1,3 +1,7 @@
+---
+description: "In many backend applications, it's best practice to encapsulate the SDK logic within a single Service or Wrapper file. This keeps your route handlers ..."
+---
+
 # Service Wrapper Pattern
 
 In many backend applications, it's best practice to encapsulate the SDK logic within a single "Service" or "Wrapper" file. This keeps your route handlers clean and centralizes your Google Business Profile (GBP) logic.
@@ -5,7 +9,11 @@ In many backend applications, it's best practice to encapsulate the SDK logic wi
 ## Example: `gbpService.js`
 
 ```javascript
-const { GBPClient, FileTokenStorage, ConsoleLogger } = require('@vitabletech/gbp-sdk');
+const {
+  GBPClient,
+  FileTokenStorage,
+  ConsoleLogger,
+} = require('@vitabletech/gbp-sdk');
 const path = require('path');
 const fs = require('fs');
 
@@ -39,7 +47,9 @@ const hasValidTokens = () => fs.existsSync(TOKENS_FILE);
  * Redirect the user to this URL to start the OAuth flow.
  */
 const getAuthUrl = () => {
-  return client.getAuthorizationUrl(['https://www.googleapis.com/auth/business.manage']);
+  return client.getAuthorizationUrl([
+    'https://www.googleapis.com/auth/business.manage',
+  ]);
 };
 
 /**
@@ -50,7 +60,7 @@ const processLoginCode = async (code) => {
   await client.processAuthCode(code);
   const accessToken = await tokenStorage.getToken();
   const refreshToken = await tokenStorage.getRefreshToken();
-  
+
   return { accessToken, refreshToken, success: true };
 };
 
@@ -86,13 +96,15 @@ let locationPaginator = null;
 const getLocations = async (accountIdOrName) => {
   // Initialize paginator if it doesn't exist
   if (!locationPaginator) {
-    locationPaginator = client.locations.listPaginator(accountIdOrName, { pageSize: 10 });
+    locationPaginator = client.locations.listPaginator(accountIdOrName, {
+      pageSize: 10,
+    });
   }
-  
+
   const locations = await locationPaginator.next();
-  return { 
+  return {
     locations,
-    hasMore: locationPaginator.hasMore 
+    hasMore: locationPaginator.hasMore,
   };
 };
 
@@ -123,13 +135,17 @@ const updateLocationData = async (locationId, data, updateMask) => {
 let reviewPaginator = null;
 const getReviews = async (accountIdOrName, locationIdOrName) => {
   if (!reviewPaginator) {
-    reviewPaginator = client.reviews.listPaginator(accountIdOrName, locationIdOrName, { pageSize: 10 });
+    reviewPaginator = client.reviews.listPaginator(
+      accountIdOrName,
+      locationIdOrName,
+      { pageSize: 10 }
+    );
   }
-  
+
   const reviews = await reviewPaginator.next();
-  return { 
+  return {
     reviews,
-    hasMore: reviewPaginator.hasMore 
+    hasMore: reviewPaginator.hasMore,
   };
 };
 
@@ -144,21 +160,21 @@ module.exports = {
   getAuthUrl,
   processLoginCode,
   logout,
-  
+
   // Accounts
   getAllAccounts,
-  
+
   // Locations
   getLocations,
   getLocationByName,
   createNewLocation,
   updateLocationData,
-  
+
   // Reviews
   getReviews,
-  
+
   // Raw Client Access
-  client
+  client,
 };
 ```
 

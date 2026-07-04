@@ -1,3 +1,7 @@
+---
+description: 'Google OAuth 2.0 access tokens expire very quickly (typically within 1 hour). The `@vitabletech/gbp-sdk` intercepts your requests, automatically excha...'
+---
+
 # Token Storage
 
 Google OAuth 2.0 access tokens expire very quickly (typically within 1 hour). The `@vitabletech/gbp-sdk` intercepts your requests, automatically exchanges your Refresh Token for a new Access Token, and caches the result so that subsequent requests are extremely fast.
@@ -9,17 +13,19 @@ To prevent the SDK from having to perform this OAuth handshake every time you re
 The SDK ships with two out-of-the-box storage providers.
 
 ### 1. File Storage (`'file'`)
+
 Saves the tokens to a JSON file on your server's disk. This is the **recommended approach for single-server setups**. The tokens survive application restarts and crashes.
 
 ```typescript
 const client = new GBPClient({
   // ... credentials
   tokenStorage: 'file',
-  tokenFilePath: '/path/to/secure/gbp-tokens.json' // Optional, defaults to ./gbp-tokens.json
+  tokenFilePath: '/path/to/secure/gbp-tokens.json', // Optional, defaults to ./gbp-tokens.json
 });
 ```
 
 ### 2. Memory Storage (`'memory'`)
+
 Saves the tokens in RAM. This is the default if you omit the `tokenStorage` parameter.
 
 **Warning**: If you use Memory Storage, the tokens are lost every time your Node.js process exits. Upon restarting, the SDK will be forced to make an immediate request to Google to fetch a new token, adding ~500ms of latency to your first API call.
@@ -27,7 +33,7 @@ Saves the tokens in RAM. This is the default if you omit the `tokenStorage` para
 ```typescript
 const client = new GBPClient({
   // ... credentials
-  tokenStorage: 'memory'
+  tokenStorage: 'memory',
 });
 ```
 
@@ -69,6 +75,6 @@ class RedisTokenStorage implements TokenStorage {
 const client = new GBPClient({
   clientId: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  tokenStorage: new RedisTokenStorage()
+  tokenStorage: new RedisTokenStorage(),
 });
 ```

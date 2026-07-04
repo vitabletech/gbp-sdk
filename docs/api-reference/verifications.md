@@ -1,3 +1,7 @@
+---
+description: 'The `VerificationsService` provides an interface for taking verification-related actions for locations on Google Business Profile, such as requesting ...'
+---
+
 # Verifications Service
 
 ## Introduction

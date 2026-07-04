@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Extends
 
@@ -40,7 +44,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`cause`](GBPApiError.md#cause)
 
-***
+---
 
 ### code?
 
@@ -50,7 +54,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`code`](GBPApiError.md#code)
 
-***
+---
 
 ### message
 
@@ -60,7 +64,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`message`](GBPApiError.md#message)
 
-***
+---
 
 ### method?
 
@@ -70,7 +74,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`method`](GBPApiError.md#method)
 
-***
+---
 
 ### name
 
@@ -80,7 +84,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`name`](GBPApiError.md#name)
 
-***
+---
 
 ### responseBody?
 
@@ -90,7 +94,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`responseBody`](GBPApiError.md#responsebody)
 
-***
+---
 
 ### stack?
 
@@ -100,7 +104,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`stack`](GBPApiError.md#stack)
 
-***
+---
 
 ### status
 
@@ -110,7 +114,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`status`](GBPApiError.md#status)
 
-***
+---
 
 ### url?
 
@@ -120,7 +124,7 @@
 
 [`GBPApiError`](GBPApiError.md).[`url`](GBPApiError.md#url)
 
-***
+---
 
 ### stackTraceLimit
 
@@ -153,7 +157,7 @@ a string representing the location in the code at which
 ```js
 const myObject = {};
 Error.captureStackTrace(myObject);
-myObject.stack;  // Similar to `new Error().stack`
+myObject.stack; // Similar to `new Error().stack`
 ```
 
 The first line of the trace will be prefixed with
@@ -208,7 +212,7 @@ a();
 
 [`GBPApiError`](GBPApiError.md).[`captureStackTrace`](GBPApiError.md#capturestacktrace)
 
-***
+---
 
 ### prepareStackTrace()
 

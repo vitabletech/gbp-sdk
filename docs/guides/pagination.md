@@ -1,3 +1,7 @@
+---
+description: 'When working with APIs that return potentially thousands of records (like fetching all reviews for a popular restaurant), Google requires you to pagin...'
+---
+
 # Auto Pagination
 
 When working with APIs that return potentially thousands of records (like fetching all reviews for a popular restaurant), Google requires you to paginate your requests. They return a `nextPageToken` string which you must manually append to the next HTTP request, looping until the token is empty.
@@ -16,6 +20,7 @@ console.log(`Successfully fetched all ${allReviews.length} reviews.`);
 ```
 
 ### When to use `listAll()`
+
 - You need the complete dataset for a background job, reporting, or analytics.
 - The total number of expected records is reasonable (e.g., < 10,000) and won't exhaust your Node.js server RAM.
 
@@ -31,7 +36,7 @@ do {
   const response = await client.reviews.list({
     parent: 'accounts/123/locations/456',
     pageSize: 50,
-    pageToken: pageToken
+    pageToken: pageToken,
   });
 
   // Process the chunk of 50 reviews
@@ -41,7 +46,6 @@ do {
 
   // Update the token for the next iteration
   pageToken = response.nextPageToken;
-  
 } while (pageToken);
 ```
 

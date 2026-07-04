@@ -1,3 +1,7 @@
+---
+description: 'This page provides a complete, runnable TypeScript example for interacting with the Categories API.'
+---
+
 # Categories Examples
 
 This page provides a complete, runnable TypeScript example for interacting with the Categories API.
@@ -7,6 +11,7 @@ You can find this source file in the GitHub repository under `/examples/categori
 ## Complete Script
 
 To run this file locally, use:
+
 ```bash
 npx tsx examples/categories.ts
 ```

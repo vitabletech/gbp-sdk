@@ -1,3 +1,7 @@
+---
+description: 'The `ChainsService` allows you to find and retrieve global brands/chains (e.g., Starbucks, Walmart) that your business locations might be affiliated w...'
+---
+
 # Chains Service
 
 ## Introduction

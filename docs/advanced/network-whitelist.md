@@ -1,3 +1,7 @@
+---
+description: 'If you are running the `@vitabletech/gbp-sdk` behind a strict corporate firewall, you will need to ensure that the following domains and URLs are whit...'
+---
+
 # GBP SDK Network Whitelist
 
 If you are running the `@vitabletech/gbp-sdk` behind a strict corporate firewall, you will need to ensure that the following domains and URLs are whitelisted for outbound traffic (HTTPS on port 443).

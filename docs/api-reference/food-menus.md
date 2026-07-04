@@ -1,3 +1,7 @@
+---
+description: 'The SDK currently provides complete, strict TypeScript definitions for the Google Business Profile **FoodMenus API**.'
+---
+
 # Food Menus (Types)
 
 ## Introduction

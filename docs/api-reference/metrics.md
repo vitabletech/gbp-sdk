@@ -1,3 +1,7 @@
+---
+description: 'The `MetricsService` provides an interface to fetch performance metrics and insights for your Google Business Profile locations using the modern **Bus...'
+---
+
 # Metrics Service
 
 ## Introduction

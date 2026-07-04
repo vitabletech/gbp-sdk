@@ -1,3 +1,7 @@
+---
+description: 'When integrating with the Google Business Profile API, there are several nuances, timelines, and restrictions that developers should be aware of.'
+---
+
 # FAQ & API Behaviors
 
 When integrating with the Google Business Profile API, there are several nuances, timelines, and restrictions that developers should be aware of.

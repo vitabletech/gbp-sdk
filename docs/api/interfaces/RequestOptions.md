@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Extends
 
@@ -12,7 +16,7 @@
 
 > `optional` **body?**: `any`
 
-***
+---
 
 ### cache?
 
@@ -24,7 +28,7 @@ A string indicating how the request will interact with the browser's cache to se
 
 `Omit.cache`
 
-***
+---
 
 ### credentials?
 
@@ -36,11 +40,11 @@ A string indicating whether credentials will be sent with the request always, ne
 
 `Omit.credentials`
 
-***
+---
 
 ### headers?
 
-> `optional` **headers?**: `Record`\<`string`, `string`\>
+> `optional` **headers?**: `Record`\<`string`, `string`>\>
 
 A Headers object, an object literal, or an array of two-item arrays to set request's headers.
 
@@ -48,7 +52,7 @@ A Headers object, an object literal, or an array of two-item arrays to set reque
 
 `Omit.headers`
 
-***
+---
 
 ### integrity?
 
@@ -60,7 +64,7 @@ A cryptographic hash of the resource to be fetched by request. Sets request's in
 
 `Omit.integrity`
 
-***
+---
 
 ### keepalive?
 
@@ -72,7 +76,7 @@ A boolean to set request's keepalive.
 
 `Omit.keepalive`
 
-***
+---
 
 ### method?
 
@@ -84,7 +88,7 @@ A string to set request's method.
 
 `Omit.method`
 
-***
+---
 
 ### mode?
 
@@ -96,7 +100,7 @@ A string to indicate whether the request will use CORS, or will be restricted to
 
 `Omit.mode`
 
-***
+---
 
 ### priority?
 
@@ -106,13 +110,13 @@ A string to indicate whether the request will use CORS, or will be restricted to
 
 `Omit.priority`
 
-***
+---
 
 ### query?
 
-> `optional` **query?**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `undefined`\>
+> `optional` **query?**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `undefined`>\>
 
-***
+---
 
 ### redirect?
 
@@ -124,7 +128,7 @@ A string indicating whether request follows redirects, results in an error upon 
 
 `Omit.redirect`
 
-***
+---
 
 ### referrer?
 
@@ -136,7 +140,7 @@ A string whose value is a same-origin URL, "about:client", or the empty string, 
 
 `Omit.referrer`
 
-***
+---
 
 ### referrerPolicy?
 
@@ -148,13 +152,13 @@ A referrer policy to set request's referrerPolicy.
 
 `Omit.referrerPolicy`
 
-***
+---
 
 ### retries?
 
 > `optional` **retries?**: `number`
 
-***
+---
 
 ### signal?
 
@@ -166,19 +170,19 @@ An AbortSignal to set request's signal.
 
 `Omit.signal`
 
-***
+---
 
 ### timeoutMs?
 
 > `optional` **timeoutMs?**: `number`
 
-***
+---
 
 ### url
 
 > **url**: `string`
 
-***
+---
 
 ### window?
 

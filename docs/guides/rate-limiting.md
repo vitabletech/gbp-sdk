@@ -1,3 +1,7 @@
+---
+description: 'Google enforces strict Quota Limits on the Business Profile APIs (e.g., maximum Queries Per Minute, or maximum Queries Per Day).'
+---
+
 # Rate Limiting & Retries
 
 Google enforces strict Quota Limits on the Business Profile APIs (e.g., maximum Queries Per Minute, or maximum Queries Per Day).
@@ -25,24 +29,25 @@ You can configure the retry behavior when initializing the client.
 const client = new GBPClient({
   clientId: '...',
   clientSecret: '...',
-  
+
   // The maximum number of times to retry a failed request.
   // Set to 0 to disable retries entirely.
   // Default: 3
   maxRetries: 5,
-  
-  // The maximum time (in milliseconds) the SDK should wait for a single 
+
+  // The maximum time (in milliseconds) the SDK should wait for a single
   // request to complete before throwing a TimeoutError.
   // Default: 30000 (30 seconds)
-  timeoutMs: 60000 
+  timeoutMs: 60000,
 });
 ```
 
 ## Handling persistent RateLimitErrors
 
-If you configure `maxRetries: 3`, and the 3rd retry still returns a 429, the SDK gives up and throws a `RateLimitError`. 
+If you configure `maxRetries: 3`, and the 3rd retry still returns a 429, the SDK gives up and throws a `RateLimitError`.
 
 If you see this error frequently, it means you are genuinely exceeding your Google Cloud Quotas and need to either:
+
 1. Implement job queuing on your backend to throttle how fast you call the SDK.
 2. Request a Quota Increase from Google Cloud Console.
 
@@ -53,7 +58,7 @@ try {
   await client.accounts.listAll();
 } catch (error) {
   if (error instanceof RateLimitError) {
-    console.error("Critical: Google Quotas exceeded. Please slow down.");
+    console.error('Critical: Google Quotas exceeded. Please slow down.');
   }
 }
 ```

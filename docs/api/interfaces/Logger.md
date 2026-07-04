@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Methods
 
@@ -22,7 +26,7 @@
 
 `void`
 
-***
+---
 
 ### error()
 
@@ -42,7 +46,7 @@
 
 `void`
 
-***
+---
 
 ### info()
 
@@ -62,7 +66,7 @@
 
 `void`
 
-***
+---
 
 ### warn()
 

@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Implements
 
@@ -26,7 +30,7 @@
 
 ### clearTokens()
 
-> **clearTokens**(): `Promise`\<`void`\>
+> **clearTokens**(): `Promise`\<`void`>\>
 
 #### Returns
 
@@ -36,11 +40,11 @@
 
 [`TokenStorage`](../interfaces/TokenStorage.md).[`clearTokens`](../interfaces/TokenStorage.md#cleartokens)
 
-***
+---
 
 ### getRefreshToken()
 
-> **getRefreshToken**(): `Promise`\<`string` \| `null`\>
+> **getRefreshToken**(): `Promise`\<`string` \| `null`>\>
 
 #### Returns
 
@@ -50,11 +54,11 @@
 
 [`TokenStorage`](../interfaces/TokenStorage.md).[`getRefreshToken`](../interfaces/TokenStorage.md#getrefreshtoken)
 
-***
+---
 
 ### getToken()
 
-> **getToken**(): `Promise`\<`string` \| `null`\>
+> **getToken**(): `Promise`\<`string` \| `null`>\>
 
 #### Returns
 
@@ -64,11 +68,11 @@
 
 [`TokenStorage`](../interfaces/TokenStorage.md).[`getToken`](../interfaces/TokenStorage.md#gettoken)
 
-***
+---
 
 ### setRefreshToken()
 
-> **setRefreshToken**(`token`): `Promise`\<`void`\>
+> **setRefreshToken**(`token`): `Promise`\<`void`>\>
 
 #### Parameters
 
@@ -84,11 +88,11 @@
 
 [`TokenStorage`](../interfaces/TokenStorage.md).[`setRefreshToken`](../interfaces/TokenStorage.md#setrefreshtoken)
 
-***
+---
 
 ### setToken()
 
-> **setToken**(`token`, `expiresInSeconds`): `Promise`\<`void`\>
+> **setToken**(`token`, `expiresInSeconds`): `Promise`\<`void`>\>
 
 #### Parameters
 

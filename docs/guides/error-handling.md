@@ -1,8 +1,13 @@
+---
+description: 'The `@vitabletech/gbp-sdk` throws specifically typed custom errors to help you programmatically handle different failure scenarios. This replaces gene...'
+---
+
 # Error Handling
 
 The `@vitabletech/gbp-sdk` throws specifically typed custom errors to help you programmatically handle different failure scenarios. This replaces generic network errors with actionable, context-aware exceptions.
 
 ## Base Error: `GBPApiError`
+
 All errors thrown by the SDK inherit from `GBPApiError`. You can use this for global catch blocks.
 
 ```typescript
@@ -21,10 +26,11 @@ try {
 ## Specific Errors
 
 ### `AuthenticationError`
+
 Thrown when the SDK fails to authenticate with Google.
 
 - **Status Code**: 401
-- **Possible Causes**: 
+- **Possible Causes**:
   - Expired or revoked `refreshToken`.
   - Invalid `clientId` or `clientSecret`.
 - **How to Fix**: Redirect the user to the Google Login flow to obtain a new refresh token.
@@ -41,23 +47,27 @@ catch (error) {
 ```
 
 ### `RateLimitError`
-Thrown when your application exceeds Google's API quotas. 
 
-*Note: The SDK automatically retries rate-limited requests using exponential backoff up to the configured `maxRetries`. This error is only thrown if all retries fail.*
+Thrown when your application exceeds Google's API quotas.
+
+_Note: The SDK automatically retries rate-limited requests using exponential backoff up to the configured `maxRetries`. This error is only thrown if all retries fail._
 
 - **Status Code**: 429
 - **Possible Causes**: Exceeding Queries Per Minute (QPM) or Daily quotas.
 - **How to Fix**: Ask for higher quotas in Google Cloud Console, or implement queuing on your backend.
 
 ### `TimeoutError`
+
 Thrown if the Google API does not respond within the configured `timeoutMs` limit.
 
 - **How to Fix**: Increase `timeoutMs` when initializing the client, especially if you are uploading large media files.
 
 ### `NetworkError`
+
 Thrown when the DNS lookup fails, or the server is completely unreachable (e.g. your application loses internet connection).
 
 ## Google API Validation Errors (400)
+
 If you pass invalid parameters (e.g., a missing `readMask`), it will throw a `GBPApiError` with a status of 400.
 
 You can inspect the `error.details.responseBody` to see exactly what Google rejected:
