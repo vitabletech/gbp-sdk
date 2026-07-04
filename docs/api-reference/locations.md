@@ -120,22 +120,24 @@ Creates a new location for the specified account. The SDK performs payload valid
 
 #### Syntax
 
+The request body contains an instance of Location. [Location](https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations#Location)
+
 ```typescript
 async client.locations.create(
   accountId: string,
-  data: any,
+  data: Location,
   options?: { validateOnly?: boolean; requestId?: string }
 ): Promise<any>
 ```
 
 #### Parameters
 
-| Parameter              | Type      | Required | Description                                                                                                                                                                                        |
-| ---------------------- | --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `accountId`            | `string`  | Yes      | The ID of the account to create the location under (e.g. `accounts/123456`)                                                                                                                        |
-| `data`                 | `object`  | Yes      | The location data payload containing `title`, `languageCode`, `storefrontAddress`, etc.                                                                                                            |
-| `options.validateOnly` | `boolean` | No       | If true, the request is validated by Google without actually creating the location. Defaults to `true` to prevent accidental creation in production. Set to `false` to actually create a location. |
-| `options.requestId`    | `string`  | No       | A unique request ID (like a UUID) for the server to detect duplicated requests.                                                                                                                    |
+| Parameter              | Type       | Required | Description                                                                                                                                                                                        |
+| ---------------------- | ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accountId`            | `string`   | Yes      | The ID of the account to create the location under (e.g. `accounts/123456`)                                                                                                                        |
+| `data`                 | `Location` | Yes      | The location data payload containing `title`, `languageCode`, `storefrontAddress`, etc.                                                                                                            |
+| `options.validateOnly` | `boolean`  | No       | If true, the request is validated by Google without actually creating the location. Defaults to `true` to prevent accidental creation in production. Set to `false` to actually create a location. |
+| `options.requestId`    | `string`   | No       | A unique request ID (like a UUID) for the server to detect duplicated requests.                                                                                                                    |
 
 ### `patch(locationId, data, updateMask)`
 
@@ -145,8 +147,10 @@ Updates an existing location. You must provide an `updateMask` detailing which f
 
 #### Syntax
 
+The request body contains an instance of Location. [Location](https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations#Location)
+
 ```typescript
-async client.locations.patch(locationId: string, data: any, updateMask: string): Promise<any>
+async client.locations.patch(locationId: string, data: Location, updateMask: string): Promise<any>
 ```
 
 ### `delete(locationId)`
@@ -183,10 +187,12 @@ Updates specific attributes for a location. You must provide an `attributeMask` 
 
 #### Syntax
 
+The request body contains an instance of Attributes. [Attributes](https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations#Attributes)
+
 ```typescript
 async client.locations.patchAttributes(
   locationId: string,
-  data: any,
+  data: Attributes,
   attributeMask: string
 ): Promise<any>
 ```
