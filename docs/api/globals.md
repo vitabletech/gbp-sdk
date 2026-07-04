@@ -1,0 +1,75 @@
+---
+description: '[**@vitabletech/gbp-sdk**](index.md)'
+---
+
+[**@vitabletech/gbp-sdk**](index.md)
+
+---
+
+## Enumerations
+
+- [Allergen](enumerations/Allergen.md)
+- [Cuisine](enumerations/Cuisine.md)
+- [DailyMetric](enumerations/DailyMetric.md)
+- [DietaryRestriction](enumerations/DietaryRestriction.md)
+- [EnergyUnit](enumerations/EnergyUnit.md)
+- [MassUnit](enumerations/MassUnit.md)
+- [PreparationMethod](enumerations/PreparationMethod.md)
+- [Spiciness](enumerations/Spiciness.md)
+- [VerificationMethod](enumerations/VerificationMethod.md)
+- [VerificationState](enumerations/VerificationState.md)
+
+## Classes
+
+- [AuthenticationError](classes/AuthenticationError.md)
+- [ConsoleLogger](classes/ConsoleLogger.md)
+- [CursorPaginator](classes/CursorPaginator.md)
+- [FileTokenStorage](classes/FileTokenStorage.md)
+- [GBPApiError](classes/GBPApiError.md)
+- [GBPClient](classes/GBPClient.md)
+- [MemoryTokenStorage](classes/MemoryTokenStorage.md)
+- [NetworkError](classes/NetworkError.md)
+- [RateLimitError](classes/RateLimitError.md)
+- [SilentLogger](classes/SilentLogger.md)
+- [TimeoutError](classes/TimeoutError.md)
+
+## Interfaces
+
+- [AddressVerificationData](interfaces/AddressVerificationData.md)
+- [CaloriesFact](interfaces/CaloriesFact.md)
+- [Chain](interfaces/Chain.md)
+- [ChainName](interfaces/ChainName.md)
+- [ChainUri](interfaces/ChainUri.md)
+- [CompleteVerificationRequest](interfaces/CompleteVerificationRequest.md)
+- [CompleteVerificationResponse](interfaces/CompleteVerificationResponse.md)
+- [DailyRange](interfaces/DailyRange.md)
+- [DateRange](interfaces/DateRange.md)
+- [EmailVerificationData](interfaces/EmailVerificationData.md)
+- [FetchVerificationOptionsRequest](interfaces/FetchVerificationOptionsRequest.md)
+- [FetchVerificationOptionsResponse](interfaces/FetchVerificationOptionsResponse.md)
+- [FoodMenu](interfaces/FoodMenu.md)
+- [FoodMenuItem](interfaces/FoodMenuItem.md)
+- [FoodMenuItemAttributes](interfaces/FoodMenuItemAttributes.md)
+- [FoodMenuItemOption](interfaces/FoodMenuItemOption.md)
+- [FoodMenus](interfaces/FoodMenus.md)
+- [FoodMenuSection](interfaces/FoodMenuSection.md)
+- [GBPClientConfig](interfaces/GBPClientConfig.md)
+- [Ingredient](interfaces/Ingredient.md)
+- [ListVerificationsResponse](interfaces/ListVerificationsResponse.md)
+- [Logger](interfaces/Logger.md)
+- [MenuLabel](interfaces/MenuLabel.md)
+- [Money](interfaces/Money.md)
+- [NutritionFact](interfaces/NutritionFact.md)
+- [NutritionFacts](interfaces/NutritionFacts.md)
+- [PerformanceMetricsRequest](interfaces/PerformanceMetricsRequest.md)
+- [PortionSize](interfaces/PortionSize.md)
+- [PostalAddress](interfaces/PostalAddress.md)
+- [RequestOptions](interfaces/RequestOptions.md)
+- [SearchChainsResponse](interfaces/SearchChainsResponse.md)
+- [ServiceBusinessContext](interfaces/ServiceBusinessContext.md)
+- [TokenStorage](interfaces/TokenStorage.md)
+- [Verification](interfaces/Verification.md)
+- [VerificationOption](interfaces/VerificationOption.md)
+- [VerifyLocationRequest](interfaces/VerifyLocationRequest.md)
+- [VerifyLocationResponse](interfaces/VerifyLocationResponse.md)
+- [VoiceOfMerchantState](interfaces/VoiceOfMerchantState.md)
