@@ -50,8 +50,10 @@ Uploads a new media item to the location using a source URL.
 
 #### Syntax
 
+The request body contains an instance of MediaItem. [MediaItem](https://developers.google.com/my-business/reference/rest/v4/accounts.locations.media#MediaItem)
+
 ```typescript
-async client.media.create(accountId: string, locationId: string, data: any): Promise<any>
+async client.media.create(accountId: string, locationId: string, data: MediaItem): Promise<any>
 ```
 
 #### Request Example
@@ -79,8 +81,10 @@ Updates metadata of the specified media item. Note that this can typically only 
 
 #### Syntax
 
+The request body contains an instance of MediaItem. [MediaItem](https://developers.google.com/my-business/reference/rest/v4/accounts.locations.media#MediaItem)
+
 ```typescript
-async client.media.patch(accountId: string, locationId: string, mediaKey: string, data: any, updateMask?: string): Promise<any>
+async client.media.patch(accountId: string, locationId: string, mediaKey: string, data: MediaItem, updateMask?: string): Promise<any>
 ```
 
 #### Request Example
