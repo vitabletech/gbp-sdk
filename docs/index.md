@@ -34,9 +34,7 @@ features:
   - title: 🚦 Smart Rate Limiting
     details: Built-in exponential backoff and automatic retry logic for 429 and 5xx errors.
     link: /guides/error-handling
-  - title: 🔌 Powerful Middleware
-    details: Intercept requests and responses globally to add custom logging, metrics, or data transformations.
-    link: /guides/middleware
+description: '```bash [npm]'
 ---
 
 <div align="center" style="margin-top: 2rem; margin-bottom: 2rem; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">

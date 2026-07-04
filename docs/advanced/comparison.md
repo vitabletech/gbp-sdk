@@ -1,3 +1,7 @@
+---
+description: 'Why use `@vitabletech/gbp-sdk` instead of just using standard `fetch()` or `axios`?'
+---
+
 # SDK vs Raw Fetch
 
 Why use `@vitabletech/gbp-sdk` instead of just using standard `fetch()` or `axios`?
@@ -8,14 +12,14 @@ This SDK handles the 90% for you.
 
 ## Feature Comparison
 
-| Feature | `@vitabletech/gbp-sdk` | Raw `fetch` or `axios` | `@googleapis/mybusiness` |
-| --- | --- | --- | --- |
-| **OAuth Token Refreshing** | ✔ Automatic & Thread-safe | ✘ Build it yourself | ✔ Requires `google-auth-library` |
-| **Auto Pagination** | ✔ `listAll()` method | ✘ Manual `pageToken` loops | ✘ Manual loops |
-| **Rate Limit Retries** | ✔ Exponential backoff built-in | ✘ Build it yourself | ✘ Manual |
-| **Type Safety** | ✔ Strict TypeScript interfaces | ✘ Manual `any` casting | ⚠️ Complex/Generated types |
-| **Generic Requests** | ✔ `client.request()` for new APIs | ✔ Native | ✘ Limited to published versions |
-| **Bundle Size** | 🚀 Extremely lightweight | 🚀 Lightweight | 🐢 Very heavy (huge dependency tree) |
+| Feature                    | `@vitabletech/gbp-sdk`            | Raw `fetch` or `axios`     | `@googleapis/mybusiness`             |
+| -------------------------- | --------------------------------- | -------------------------- | ------------------------------------ |
+| **OAuth Token Refreshing** | ✔ Automatic & Thread-safe         | ✘ Build it yourself        | ✔ Requires `google-auth-library`     |
+| **Auto Pagination**        | ✔ `listAll()` method              | ✘ Manual `pageToken` loops | ✘ Manual loops                       |
+| **Rate Limit Retries**     | ✔ Exponential backoff built-in    | ✘ Build it yourself        | ✘ Manual                             |
+| **Type Safety**            | ✔ Strict TypeScript interfaces    | ✘ Manual `any` casting     | ⚠️ Complex/Generated types           |
+| **Generic Requests**       | ✔ `client.request()` for new APIs | ✔ Native                   | ✘ Limited to published versions      |
+| **Bundle Size**            | 🚀 Extremely lightweight          | 🚀 Lightweight             | 🐢 Very heavy (huge dependency tree) |
 
 ## Example Comparison: Fetching all Locations
 
@@ -28,16 +32,21 @@ let pageToken = undefined;
 
 do {
   // Wait, is my token expired? I need to check and refresh it first!
-  const token = await getValidTokenSomehow(); 
-  
+  const token = await getValidTokenSomehow();
+
   const query = pageToken ? `?pageToken=${pageToken}` : '';
-  const response = await fetch(`https://mybusinessbusinessinformation.googleapis.com/v1/accounts/123/locations${query}`, {
-    headers: { Authorization: `Bearer ${token}` }
-  });
-  
+  const response = await fetch(
+    `https://mybusinessbusinessinformation.googleapis.com/v1/accounts/123/locations${query}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+
   // Wait, what if I got a 429 Rate Limit error? I need to add retry logic here!
-  if (response.status === 429) { /* ... manual backoff ... */ }
-  
+  if (response.status === 429) {
+    /* ... manual backoff ... */
+  }
+
   const data = await response.json();
   allLocations = allLocations.concat(data.locations || []);
   pageToken = data.nextPageToken;

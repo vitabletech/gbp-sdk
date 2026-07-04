@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Implements
 
@@ -30,7 +34,7 @@
 
 [`Logger`](../interfaces/Logger.md).[`debug`](../interfaces/Logger.md#debug)
 
-***
+---
 
 ### error()
 
@@ -44,7 +48,7 @@
 
 [`Logger`](../interfaces/Logger.md).[`error`](../interfaces/Logger.md#error)
 
-***
+---
 
 ### info()
 
@@ -58,7 +62,7 @@
 
 [`Logger`](../interfaces/Logger.md).[`info`](../interfaces/Logger.md#info)
 
-***
+---
 
 ### warn()
 

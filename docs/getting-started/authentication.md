@@ -1,6 +1,10 @@
+---
+description: 'Every request to the Google Business Profile API must be authenticated using an OAuth 2.0 access token.'
+---
+
 # Authentication (OAuth 2.0)
 
-Every request to the Google Business Profile API must be authenticated using an OAuth 2.0 access token. 
+Every request to the Google Business Profile API must be authenticated using an OAuth 2.0 access token.
 
 The `@vitabletech/gbp-sdk` manages the entire lifecycle of these tokens for you. You do not need to manually check token expiration or refresh tokens—the SDK intercepts requests, checks token validity, and refreshes them seamlessly.
 
@@ -11,6 +15,7 @@ Here is exactly how the authentication flow works in production:
 ![Authentication OAuth Flow Diagram](../advanced/auth-flow.svg)
 
 ## Security Considerations
+
 > [!WARNING]
 > Never hardcode your `clientSecret` or `refreshToken` directly in your source code. Always use Environment Variables (`.env`) or a secure secret manager.
 
@@ -28,9 +33,7 @@ const client = new GBPClient({
 });
 
 // Generate the URL
-const scopes = [
-  'https://www.googleapis.com/auth/business.manage'
-];
+const scopes = ['https://www.googleapis.com/auth/business.manage'];
 const authUrl = client.getAuthorizationUrl(scopes, 'optional-state-string');
 
 // Express.js example:
@@ -45,7 +48,7 @@ Once the user approves your app, Google redirects them back to your `redirectUri
 // Example inside an Express.js route
 app.get('/oauth/callback', async (req, res) => {
   const code = req.query.code as string;
-  
+
   try {
     // This automatically fetches and stores the refresh/access tokens
     await client.processAuthCode(code);
@@ -66,7 +69,7 @@ const client = new GBPClient({
   clientId: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   refreshToken: '1//04fFgUZmEO-...', // Retrieve from your secure DB
-  tokenStorage: 'memory'
+  tokenStorage: 'memory',
 });
 
 // The SDK will automatically fetch a valid access token behind the scenes!
@@ -91,4 +94,4 @@ console.log('Expires In (seconds):', tokenInfo.expires_in);
 
 > [!CAUTION]
 > **Losing the Refresh Token**
-> Google only provides a `refresh_token` the **very first time** a user authenticates. If you lose it and prompt the user to log in again, Google will *not* send a new one by default. You must store it securely upon `processAuthCode()`. If you need to force Google to issue a new one, you must include `prompt="consent"` in the authorization request parameters (handled automatically by our SDK in future updates, or configurable via custom auth options).
+> Google only provides a `refresh_token` the **very first time** a user authenticates. If you lose it and prompt the user to log in again, Google will _not_ send a new one by default. You must store it securely upon `processAuthCode()`. If you need to force Google to issue a new one, you must include `prompt="consent"` in the authorization request parameters (handled automatically by our SDK in future updates, or configurable via custom auth options).

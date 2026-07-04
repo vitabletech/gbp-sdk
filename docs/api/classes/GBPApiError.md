@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Extends
 
@@ -63,13 +67,13 @@
 
 `Error.cause`
 
-***
+---
 
 ### code?
 
 > `readonly` `optional` **code?**: `string`
 
-***
+---
 
 ### message
 
@@ -79,13 +83,13 @@
 
 `Error.message`
 
-***
+---
 
 ### method?
 
 > `readonly` `optional` **method?**: `string`
 
-***
+---
 
 ### name
 
@@ -95,13 +99,13 @@
 
 `Error.name`
 
-***
+---
 
 ### responseBody?
 
 > `readonly` `optional` **responseBody?**: `any`
 
-***
+---
 
 ### stack?
 
@@ -111,19 +115,19 @@
 
 `Error.stack`
 
-***
+---
 
 ### status
 
 > `readonly` **status**: `number`
 
-***
+---
 
 ### url?
 
 > `readonly` `optional` **url?**: `string`
 
-***
+---
 
 ### stackTraceLimit
 
@@ -156,7 +160,7 @@ a string representing the location in the code at which
 ```js
 const myObject = {};
 Error.captureStackTrace(myObject);
-myObject.stack;  // Similar to `new Error().stack`
+myObject.stack; // Similar to `new Error().stack`
 ```
 
 The first line of the trace will be prefixed with
@@ -211,7 +215,7 @@ a();
 
 `Error.captureStackTrace`
 
-***
+---
 
 ### prepareStackTrace()
 

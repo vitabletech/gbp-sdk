@@ -1,3 +1,7 @@
+---
+description: 'The `LocationsService` is the core of the Google Business Profile API. A Location represents a physical storefront or service area business. Most othe...'
+---
+
 # Locations
 
 ## Introduction

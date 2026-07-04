@@ -1,6 +1,10 @@
+---
+description: '[**@vitabletech/gbp-sdk**](../index.md)'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
-***
+---
 
 ## Type Parameters
 
@@ -12,7 +16,7 @@
 
 ### Constructor
 
-> **new CursorPaginator**\<`T`\>(`client`, `endpoint`, `itemsKey`, `queryParams?`): `CursorPaginator`\<`T`\>
+> **new CursorPaginator**\<`T`>\>(`client`, `endpoint`, `itemsKey`, `queryParams?`): `CursorPaginator`\<`T`>\>
 
 #### Parameters
 
@@ -42,7 +46,7 @@
 
 > **hasMore**: `boolean` = `true`
 
-***
+---
 
 ### pageToken?
 

@@ -1,3 +1,7 @@
+---
+description: 'This guide will help you instantiate the SDK and make your first successful API call to fetch all Google Business Profile Accounts.'
+---
+
 # Quick Start
 
 This guide will help you instantiate the SDK and make your first successful API call to fetch all Google Business Profile Accounts.
@@ -19,13 +23,13 @@ const client = new GBPClient({
   clientId: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
-  
-  // Choose how tokens are stored between restarts. 
+
+  // Choose how tokens are stored between restarts.
   // 'file' stores them in a local gbp-tokens.json file.
   tokenStorage: 'file',
-  
+
   // (Optional) Logs underlying HTTP requests and SDK operations
-  logger: new ConsoleLogger() 
+  logger: new ConsoleLogger(),
 });
 ```
 
@@ -38,11 +42,10 @@ async function fetchAccounts() {
   try {
     const accounts = await client.accounts.listAll();
     console.log(`Successfully fetched ${accounts.length} accounts!`);
-    
-    accounts.forEach(account => {
+
+    accounts.forEach((account) => {
       console.log(`- ${account.accountName} (${account.name})`);
     });
-    
   } catch (error) {
     console.error('Failed to fetch accounts:', error);
   }
@@ -52,4 +55,5 @@ fetchAccounts();
 ```
 
 ## Next Steps
+
 Now that you have fetched your Accounts, you can use the account `name` property to start fetching [Locations](/api-reference/locations) and [Reviews](/api-reference/reviews).

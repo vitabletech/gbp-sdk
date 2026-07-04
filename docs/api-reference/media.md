@@ -1,3 +1,7 @@
+---
+description: 'The `MediaService` manages photos and videos for a Location. Google requires you to provide a publicly accessible URL of the media file when creating ...'
+---
+
 # Media
 
 ## Introduction
