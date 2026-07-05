@@ -49,6 +49,9 @@ Google strictly rate-limits the GBP APIs. This SDK includes a built-in retry mec
 
 Google wants to save bandwidth, so they force you to explicitly declare exactly which fields you want them to return in a response. If you don't provide a `readMask` in your options, the SDK will automatically supply a sensible default (like `name,title` for Locations).
 
+**Available `readMask` fields for Locations include:**
+`name`, `languageCode`, `storeCode`, `title`, `phoneNumbers`, `categories`, `storefrontAddress`, `websiteUri`, `regularHours`, `specialHours`, `serviceArea`, `labels`, `adWordsLocationExtensions`, `latlng`, `openInfo`, `metadata`, `profile`, `relationshipData`, `moreHours`, `serviceItems`
+
 ### How can I test location creation without actually spamming my Google account?
 
 Use the `validateOnly` option!

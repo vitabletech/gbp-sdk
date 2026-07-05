@@ -6,7 +6,7 @@ hero:
   text: 'Enterprise Node.js SDK'
   tagline: 'The most complete TypeScript SDK for the Google Business Profile APIs. Build powerful location management apps with zero-config OAuth, auto-pagination, and strict type safety.'
   image:
-    src: /hero-graphic.webp
+    src: /Home-page.png
     alt: GBP SDK Hero Image
   actions:
     - theme: brand
@@ -166,7 +166,7 @@ Version 1.0.0 is our official production-ready release, bringing native support 
 
 - **[Verifications API](/api-reference/verifications)**: Trigger phone, SMS, and postcard verifications natively (`mybusinessverifications.googleapis.com`).
 - **[Chains API](/api-reference/chains)**: Search global brands and associate your locations with corporate chains effortlessly.
-- **[Location Attributes](/api-reference/locations)**: Manage location amenities, flags, and attributes easily with `patchAttributes`.
+- **[Location Attributes](/guides/patch-vs-update)**: Manage location amenities, flags, and attributes easily. Check out our guide on [`patchAttributes` vs `updateLocationAttributes`](/guides/patch-vs-update) to choose the best method.
 - **Media Upload Upgrades**: The `MediaService` now fully supports Google's v4 endpoints and allows category updates via `patch()`.
 - **Enterprise Ready**: Added comprehensive [Network Whitelist](/advanced/network-whitelist) documentation to help enterprise IT teams unblock necessary domains.
 

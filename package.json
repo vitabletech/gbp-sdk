@@ -1,6 +1,6 @@
 {
   "name": "@vitabletech/gbp-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Enterprise-grade Google Business Profile (GBP) SDK for Node.js",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -33,6 +33,9 @@
   "keywords": [
     "google",
     "google-business-profile",
+    "google-my-business-profile",
+    "google-business-profile-manager",
+    "business-profile-google",
     "gbp",
     "sdk",
     "api",

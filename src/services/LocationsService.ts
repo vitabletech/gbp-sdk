@@ -211,4 +211,50 @@ export class LocationsService {
       body: data,
     });
   }
+
+  /**
+   * Updates service items for a location.
+   */
+  public async updateServiceItems(
+    locationId: string,
+    serviceItems: any[]
+  ): Promise<any> {
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
+    return this.client.request({
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
+      method: 'PATCH',
+      query: { updateMask: 'serviceItems' },
+      body: { serviceItems },
+    });
+  }
+
+  /**
+   * Retrieves service items for a location.
+   */
+  public async getServiceItems(locationId: string): Promise<any> {
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
+    return this.client.request({
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
+      method: 'GET',
+      query: { readMask: 'serviceItems' },
+    });
+  }
+
+  /**
+   * Retrieves metadata for a location.
+   */
+  public async getMetadata(locationId: string): Promise<any> {
+    const name = locationId.startsWith('locations/')
+      ? locationId
+      : `locations/${locationId}`;
+    return this.client.request({
+      url: `https://mybusinessbusinessinformation.googleapis.com/v1/${name}`,
+      method: 'GET',
+      query: { readMask: 'metadata' },
+    });
+  }
 }

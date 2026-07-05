@@ -12,7 +12,7 @@ The `@vitabletech/gbp-sdk` manages the entire lifecycle of these tokens for you.
 
 Here is exactly how the authentication flow works in production:
 
-![Authentication OAuth Flow Diagram](../advanced/auth-flow.svg)
+![Authentication OAuth Flow Diagram](/sdk-work-flow.png)
 
 ## Security Considerations
 

@@ -1,7 +1,3 @@
----
-description: '**@vitabletech/gbp-sdk**'
----
-
 **@vitabletech/gbp-sdk**
 
 ---
@@ -33,7 +29,7 @@ npm install @vitabletech/gbp-sdk
 
 ## Network Whitelist
 
-If you are running this SDK behind a strict corporate firewall, please ensure you whitelist the necessary Google API domains. See the [Network Whitelist Documentation](/advanced/network-whitelist) for the complete list of domains and URLs.
+If you are running this SDK behind a strict corporate firewall, please ensure you whitelist the necessary Google API domains. See the [Network Whitelist Documentation](_media/network-whitelist.md) for the complete list of domains and URLs.
 
 ## What's New in v1.0.0 🎉
 

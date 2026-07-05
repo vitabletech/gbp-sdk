@@ -77,7 +77,7 @@ If you do not provide a `readMask`, the SDK automatically sets a sensible defaul
 **Common `readMask` Fields:**
 You can pass a comma-separated list of any of the following fields:
 
-> `name`, `title`, `storeCode`, `languageCode`, `phoneNumbers`, `categories`, `storefrontAddress`, `websiteUri`, `regularHours`, `specialHours`, `serviceArea`, `labels`, `adWordsLocationExtensions`, `latlng`, `openInfo`, `metadata`, `profile`, `relationshipData`, `moreHours`
+> `name`, `languageCode`, `storeCode`, `title`, `phoneNumbers`, `categories`, `storefrontAddress`, `websiteUri`, `regularHours`, `specialHours`, `serviceArea`, `labels`, `adWordsLocationExtensions`, `latlng`, `openInfo`, `metadata`, `profile`, `relationshipData`, `moreHours`, `serviceItems`
 
 #### Syntax
 
@@ -190,3 +190,88 @@ async client.locations.patchAttributes(
   attributeMask: string
 ): Promise<any>
 ```
+
+---
+
+### `getMetadata(locationId)`
+
+#### Purpose
+
+Retrieves the metadata associated with a location.
+
+#### Syntax
+
+```typescript
+async client.locations.getMetadata(locationId: string): Promise<any>
+```
+
+[Reference: Location Resource](https://developers.google.com/my-business/reference/businessinformation/rest/v1/locations#Location)
+
+---
+
+### `getServiceItems(locationId)`
+
+#### Purpose
+
+Retrieves the service items for a location.
+
+#### Syntax
+
+```typescript
+async client.locations.getServiceItems(locationId: string): Promise<any>
+```
+
+[Reference: Location Resource](https://developers.google.com/my-business/reference/businessinformation/rest/v1/locations#Location)
+
+---
+
+### `updateServiceItems(locationId, serviceItems)`
+
+#### Purpose
+
+Updates the service items for a location. You must provide an array of service item objects. This controls what services are displayed on your Google Maps listing, optionally with prices.
+
+<div style="display: flex; gap: 10px; margin-top: 15px; margin-bottom: 15px;">
+  <div style="flex: 1;">
+    <p style="text-align: center; margin-bottom: 5px; font-weight: bold;">Without Prices</p>
+    <img src="/Services-without-price.png" alt="Service items without prices" style="border-radius: 8px; border: 1px solid #ccc; max-height: 400px; object-fit: contain; width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <p style="text-align: center; margin-bottom: 5px; font-weight: bold;">With Prices</p>
+    <img src="/services-with-price.png" alt="Service items with prices" style="border-radius: 8px; border: 1px solid #ccc; max-height: 400px; object-fit: contain; width: 100%;">
+  </div>
+</div>
+
+#### Syntax
+
+```typescript
+async client.locations.updateServiceItems(
+  locationId: string,
+  serviceItems: any[]
+): Promise<any>
+```
+
+#### Request Example
+
+```typescript
+const serviceItemsArray = [
+  {
+    structuredServiceItem: {
+      serviceTypeId: 'job_type_id:oil_change',
+      description:
+        'Quick engine oil replacement, filter changes, and basic fluid top-ups.',
+    },
+    price: {
+      currencyCode: 'INR',
+      units: '1500',
+    },
+  },
+];
+
+const updateResponse = await client.locations.updateServiceItems(
+  'locations/12345',
+  serviceItemsArray
+);
+```
+
+[Reference: updateMask=serviceItems](https://developers.google.com/my-business/reference/businessinformation/rest/v1/locations/patch)
