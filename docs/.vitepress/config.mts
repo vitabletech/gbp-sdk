@@ -21,11 +21,9 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#3b82f6' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Google Business Profile (GBP) SDK' }],
-    ['meta', { property: 'og:description', content: 'Enterprise-grade Google Business Profile (GBP) SDK for Node.js. Automatic OAuth refresh, auto-pagination, and full TypeScript support.' }],
     ['meta', { property: 'og:image', content: '/hero-graphic.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'keywords', content: 'Google Business Profile, GBP, API, SDK, Node.js, TypeScript, Google My Business, OAuth2' }],
+    ['meta', { name: 'keywords', content: 'Google Business Profile, Google Business Profile News, Google My Business Profile, Google Business Profile Manager, Business Profile Google, GBP, API, SDK, Node.js, TypeScript, Google My Business, OAuth2' }],
     ['link', { rel: 'icon', href: '/favicon/favicon.ico' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon/favicon-96x96.png' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon/favicon.svg' }],
@@ -78,6 +76,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Introduction', link: '/getting-started/introduction' },
+          { text: 'Prerequisites & Access', link: '/getting-started/prerequisites' },
           { text: 'Installation', link: '/getting-started/installation' },
           { text: 'Quick Start', link: '/getting-started/quick-start' },
           { text: 'Authentication', link: '/getting-started/authentication' },
@@ -93,6 +92,7 @@ export default defineConfig({
           { text: 'Error Handling', link: '/guides/error-handling' },
           { text: 'Rate Limiting', link: '/guides/rate-limiting' },
           { text: 'Token Storage', link: '/guides/token-storage' },
+          { text: 'patchAttributes vs patch', link: '/guides/patch-vs-patchAttributes' },
           { text: 'FAQ & Behaviors', link: '/guides/faq' }
         ]
       },
@@ -102,6 +102,7 @@ export default defineConfig({
         items: [
           { text: 'Accounts', link: '/api-reference/accounts' },
           { text: 'Locations', link: '/api-reference/locations' },
+          { text: 'Attributes', link: '/api-reference/attributes' },
           { text: 'Reviews', link: '/api-reference/reviews' },
           { text: 'Categories', link: '/api-reference/categories' },
           { text: 'Media', link: '/api-reference/media' },

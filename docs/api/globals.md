@@ -1,7 +1,3 @@
----
-description: '[**@vitabletech/gbp-sdk**](index.md)'
----
-
 [**@vitabletech/gbp-sdk**](index.md)
 
 ---
@@ -21,17 +17,28 @@ description: '[**@vitabletech/gbp-sdk**](index.md)'
 
 ## Classes
 
+- [AccountsService](classes/AccountsService.md)
+- [AttributesService](classes/AttributesService.md)
 - [AuthenticationError](classes/AuthenticationError.md)
+- [CategoriesService](classes/CategoriesService.md)
+- [ChainsService](classes/ChainsService.md)
 - [ConsoleLogger](classes/ConsoleLogger.md)
 - [CursorPaginator](classes/CursorPaginator.md)
 - [FileTokenStorage](classes/FileTokenStorage.md)
 - [GBPApiError](classes/GBPApiError.md)
 - [GBPClient](classes/GBPClient.md)
+- [HttpClient](classes/HttpClient.md)
+- [LocationsService](classes/LocationsService.md)
+- [MediaService](classes/MediaService.md)
 - [MemoryTokenStorage](classes/MemoryTokenStorage.md)
+- [MetricsService](classes/MetricsService.md)
 - [NetworkError](classes/NetworkError.md)
+- [PostsService](classes/PostsService.md)
 - [RateLimitError](classes/RateLimitError.md)
+- [ReviewsService](classes/ReviewsService.md)
 - [SilentLogger](classes/SilentLogger.md)
 - [TimeoutError](classes/TimeoutError.md)
+- [VerificationsService](classes/VerificationsService.md)
 
 ## Interfaces
 

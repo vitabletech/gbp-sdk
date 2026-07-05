@@ -1,7 +1,3 @@
----
-description: '[**@vitabletech/gbp-sdk**](../index.md)'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -44,7 +40,7 @@ A string indicating whether credentials will be sent with the request always, ne
 
 ### headers?
 
-> `optional` **headers?**: `Record`\<`string`, `string`>\>
+> `optional` **headers?**: `Record`\<`string`, `string`>>\>
 
 A Headers object, an object literal, or an array of two-item arrays to set request's headers.
 
@@ -114,7 +110,7 @@ A string to indicate whether the request will use CORS, or will be restricted to
 
 ### query?
 
-> `optional` **query?**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `undefined`>\>
+> `optional` **query?**: `Record`\<`string`, `string` \| `number` \| `boolean` \| `undefined`>>\>
 
 ---
 

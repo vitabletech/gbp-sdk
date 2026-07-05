@@ -1,7 +1,3 @@
----
-description: '[**@vitabletech/gbp-sdk**](../index.md)'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -16,13 +12,13 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### Constructor
 
-> **new CursorPaginator**\<`T`>\>(`client`, `endpoint`, `itemsKey`, `queryParams?`): `CursorPaginator`\<`T`>\>
+> **new CursorPaginator**\<`T`>>\>(`client`, `endpoint`, `itemsKey`, `queryParams?`): `CursorPaginator`\<`T`>>\>
 
 #### Parameters
 
 ##### client
 
-`HttpClient`
+[`HttpClient`](HttpClient.md)
 
 ##### endpoint
 

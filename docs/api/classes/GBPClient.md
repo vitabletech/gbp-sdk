@@ -1,7 +1,3 @@
----
-description: '[**@vitabletech/gbp-sdk**](../index.md)'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -26,55 +22,61 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### accounts
 
-> **accounts**: `AccountsService`
+> **accounts**: [`AccountsService`](AccountsService.md)
+
+---
+
+### attributes
+
+> **attributes**: [`AttributesService`](AttributesService.md)
 
 ---
 
 ### categories
 
-> **categories**: `CategoriesService`
+> **categories**: [`CategoriesService`](CategoriesService.md)
 
 ---
 
 ### chains
 
-> **chains**: `ChainsService`
+> **chains**: [`ChainsService`](ChainsService.md)
 
 ---
 
 ### locations
 
-> **locations**: `LocationsService`
+> **locations**: [`LocationsService`](LocationsService.md)
 
 ---
 
 ### media
 
-> **media**: `MediaService`
+> **media**: [`MediaService`](MediaService.md)
 
 ---
 
 ### metrics
 
-> **metrics**: `MetricsService`
+> **metrics**: [`MetricsService`](MetricsService.md)
 
 ---
 
 ### posts
 
-> **posts**: `PostsService`
+> **posts**: [`PostsService`](PostsService.md)
 
 ---
 
 ### reviews
 
-> **reviews**: `ReviewsService`
+> **reviews**: [`ReviewsService`](ReviewsService.md)
 
 ---
 
 ### verifications
 
-> **verifications**: `VerificationsService`
+> **verifications**: [`VerificationsService`](VerificationsService.md)
 
 ## Methods
 
@@ -102,7 +104,7 @@ Generates the OAuth 2.0 authorization URL for user consent.
 
 ### getTokenInfo()
 
-> **getTokenInfo**(): `Promise`\<`any`>>>\>
+> **getTokenInfo**(): `Promise`\<`any`>>\>
 
 Retrieves information about the current access token, such as its expiration time, scopes, and app ID.
 
@@ -114,7 +116,7 @@ Retrieves information about the current access token, such as its expiration tim
 
 ### processAuthCode()
 
-> **processAuthCode**(`code`): `Promise`\<`void`>>>\>
+> **processAuthCode**(`code`): `Promise`\<`void`>>\>
 
 Processes an OAuth 2.0 authorization code to fetch and store tokens.
 
@@ -132,7 +134,7 @@ Processes an OAuth 2.0 authorization code to fetch and store tokens.
 
 ### request()
 
-> **request**\<`T`>>>\>(`options`): `Promise`\<`T`>>>\>
+> **request**\<`T`>>\>(`options`): `Promise`\<`T`>>\>
 
 Generic request method for unsupported or custom API endpoints.
 This allows developers to use newly released Google APIs immediately.

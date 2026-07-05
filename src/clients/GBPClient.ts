@@ -10,6 +10,7 @@ import { MediaService } from '../services/MediaService';
 import { MetricsService } from '../services/MetricsService';
 import { VerificationsService } from '../services/VerificationsService';
 import { ChainsService } from '../services/ChainsService';
+import { AttributesService } from '../services/AttributesService';
 
 export class GBPClient {
   private tokenManager: TokenManager;
@@ -24,6 +25,7 @@ export class GBPClient {
   public metrics: MetricsService;
   public verifications: VerificationsService;
   public chains: ChainsService;
+  public attributes: AttributesService;
 
   constructor(config: GBPClientConfig) {
     this.tokenManager = new TokenManager(config);
@@ -39,6 +41,7 @@ export class GBPClient {
     this.metrics = new MetricsService(this.httpClient);
     this.verifications = new VerificationsService(this.httpClient);
     this.chains = new ChainsService(this.httpClient);
+    this.attributes = new AttributesService(this.httpClient);
   }
 
   /**

@@ -1,7 +1,3 @@
----
-description: '[**@vitabletech/gbp-sdk**](../index.md)'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -10,7 +6,7 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### clearTokens()
 
-> **clearTokens**(): `Promise`\<`void`>\>
+> **clearTokens**(): `Promise`\<`void`>>\>
 
 #### Returns
 
@@ -20,7 +16,7 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### getRefreshToken()
 
-> **getRefreshToken**(): `Promise`\<`string` \| `null`>\>
+> **getRefreshToken**(): `Promise`\<`string` \| `null`>>\>
 
 #### Returns
 
@@ -30,7 +26,7 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### getToken()
 
-> **getToken**(): `Promise`\<`string` \| `null`>\>
+> **getToken**(): `Promise`\<`string` \| `null`>>\>
 
 #### Returns
 
@@ -40,7 +36,7 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### setRefreshToken()
 
-> **setRefreshToken**(`token`): `Promise`\<`void`>\>
+> **setRefreshToken**(`token`): `Promise`\<`void`>>\>
 
 #### Parameters
 
@@ -56,7 +52,7 @@ description: '[**@vitabletech/gbp-sdk**](../index.md)'
 
 ### setToken()
 
-> **setToken**(`token`, `expiresIn`): `Promise`\<`void`>\>
+> **setToken**(`token`, `expiresIn`): `Promise`\<`void`>>\>
 
 #### Parameters
 
