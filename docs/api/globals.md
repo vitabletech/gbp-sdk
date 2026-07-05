@@ -33,11 +33,13 @@
 - [MemoryTokenStorage](classes/MemoryTokenStorage.md)
 - [MetricsService](classes/MetricsService.md)
 - [NetworkError](classes/NetworkError.md)
+- [OAuthClient](classes/OAuthClient.md)
 - [PostsService](classes/PostsService.md)
 - [RateLimitError](classes/RateLimitError.md)
 - [ReviewsService](classes/ReviewsService.md)
 - [SilentLogger](classes/SilentLogger.md)
 - [TimeoutError](classes/TimeoutError.md)
+- [TokenManager](classes/TokenManager.md)
 - [VerificationsService](classes/VerificationsService.md)
 
 ## Interfaces

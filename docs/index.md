@@ -37,6 +37,10 @@ features:
 description: '```bash [npm]'
 ---
 
+<script setup>
+import { version } from '../package.json'
+</script>
+
 <div align="center" style="margin-top: 2rem; margin-bottom: 2rem; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
   <a href="https://www.npmjs.com/package/@vitabletech/gbp-sdk"><img src="https://img.shields.io/npm/v/@vitabletech/gbp-sdk?style=for-the-badge&color=cb3837" alt="NPM Version" /></a>
   <a href="https://www.npmjs.com/package/@vitabletech/gbp-sdk"><img src="https://img.shields.io/npm/types/@vitabletech/gbp-sdk?style=for-the-badge&color=3178c6" alt="TypeScript" /></a>
@@ -78,20 +82,10 @@ pnpm add @vitabletech/gbp-sdk
   100% { filter: hue-rotate(360deg); }
 }
 
-/* 2. Pulsing Glow behind the Hero Image */
-.VPHero .image-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, rgba(139, 92, 246, 0) 70%);
-  filter: blur(40px);
-  z-index: -1;
-  animation: pulse 4s ease-in-out infinite alternate;
-  pointer-events: none;
+.VPHero .image-src {
+  max-width: 80%;
+  max-height: none;
+  width: 90%;
 }
 
 @keyframes pulse {
@@ -140,14 +134,14 @@ pnpm add @vitabletech/gbp-sdk
 <div class="marquee-wrapper">
   <div class="marquee-content">
     <!-- First set -->
-    <span class="marquee-item">🚀 v1.0.0 is LIVE!</span>
+    <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
     <span class="marquee-item">✅ Native Verifications API</span>
     <span class="marquee-item">🔗 Official Chains API</span>
     <span class="marquee-item">🍔 Food Menus Types</span>
     <span class="marquee-item">📊 v1 Performance Metrics</span>
     <span class="marquee-item">🤖 Auto-Pagination Built-in!</span>
     <!-- Duplicate set for seamless scrolling -->
-    <span class="marquee-item">🚀 v1.0.0 is LIVE!</span>
+    <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
     <span class="marquee-item">✅ Native Verifications API</span>
     <span class="marquee-item">🔗 Official Chains API</span>
     <span class="marquee-item">🍔 Food Menus Types</span>
@@ -158,10 +152,10 @@ pnpm add @vitabletech/gbp-sdk
 
 ---
 
-## 🎉 What's New in v1.0.0
+## 🎉 What's New in v{{ version }}
 
 ::: info 🚀 **Massive API Expansion & Stable Release!**
-Version 1.0.0 is our official production-ready release, bringing native support for some of Google's most powerful enterprise APIs.
+Version {{ version }} is our official production-ready release, bringing native support for some of Google's most powerful enterprise APIs.
 :::
 
 - **[Verifications API](/api-reference/verifications)**: Trigger phone, SMS, and postcard verifications natively (`mybusinessverifications.googleapis.com`).

@@ -22,7 +22,7 @@
 
 ### fetchMultiDailyMetricsTimeSeries()
 
-> **fetchMultiDailyMetricsTimeSeries**(`locationId`, `request`): `Promise`\<`any`>>\>
+> **fetchMultiDailyMetricsTimeSeries**(`locationId`, `request`): `Promise`\<`any`>\>
 
 Returns a report containing performance metrics by location.
 Note: This uses the new Business Profile Performance API v1.

@@ -22,7 +22,7 @@
 
 ### get()
 
-> **get**(`chainName`): `Promise`\<[`Chain`](../interfaces/Chain.md)>>\>
+> **get**(`chainName`): `Promise`\<[`Chain`](../interfaces/Chain.md)>\>
 
 Gets the specified chain.
 
@@ -42,7 +42,7 @@ The name of the chain to fetch (e.g., 'chains/12345').
 
 ### search()
 
-> **search**(`query`, `pageSize?`): `Promise`\<[`SearchChainsResponse`](../interfaces/SearchChainsResponse.md)>>\>
+> **search**(`query`, `pageSize?`): `Promise`\<[`SearchChainsResponse`](../interfaces/SearchChainsResponse.md)>\>
 
 Searches the chain based on chain name.
 

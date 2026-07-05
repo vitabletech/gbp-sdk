@@ -22,7 +22,7 @@
 
 ### create()
 
-> **create**(`accountId`, `data`, `options?`): `Promise`\<`any`>>\>
+> **create**(`accountId`, `data`, `options?`): `Promise`\<`any`>\>
 
 Creates a new location.
 
@@ -54,7 +54,7 @@ Creates a new location.
 
 ### delete()
 
-> **delete**(`locationId`): `Promise`\<`void`>>\>
+> **delete**(`locationId`): `Promise`\<`void`>\>
 
 Deletes a location.
 
@@ -72,7 +72,7 @@ Deletes a location.
 
 ### get()
 
-> **get**(`locationId`, `options?`): `Promise`\<`any`>>\>
+> **get**(`locationId`, `options?`): `Promise`\<`any`>\>
 
 Gets a specific location by ID.
 
@@ -96,7 +96,7 @@ Gets a specific location by ID.
 
 ### getAttributes()
 
-> **getAttributes**(`locationId`): `Promise`\<`any`>>\>
+> **getAttributes**(`locationId`): `Promise`\<`any`>\>
 
 Gets attributes for a location.
 
@@ -114,7 +114,7 @@ Gets attributes for a location.
 
 ### getMetadata()
 
-> **getMetadata**(`locationId`): `Promise`\<`any`>>\>
+> **getMetadata**(`locationId`): `Promise`\<`any`>\>
 
 Retrieves metadata for a location.
 
@@ -132,7 +132,7 @@ Retrieves metadata for a location.
 
 ### getServiceItems()
 
-> **getServiceItems**(`locationId`): `Promise`\<`any`>>\>
+> **getServiceItems**(`locationId`): `Promise`\<`any`>\>
 
 Retrieves service items for a location.
 
@@ -150,7 +150,7 @@ Retrieves service items for a location.
 
 ### list()
 
-> **list**(`accountId`, `options?`): `Promise`\<`any`>>\>
+> **list**(`accountId`, `options?`): `Promise`\<`any`>\>
 
 Lists all locations for a specific account.
 
@@ -200,7 +200,7 @@ Automatically fetches all locations for an account.
 
 ### listPaginator()
 
-> **listPaginator**(`accountId`, `options?`): [`CursorPaginator`](CursorPaginator.md)\<`any`>>\>
+> **listPaginator**(`accountId`, `options?`): [`CursorPaginator`](CursorPaginator.md)\<`any`>\>
 
 Returns a paginator object to manually fetch locations page by page.
 
@@ -228,7 +228,7 @@ Returns a paginator object to manually fetch locations page by page.
 
 ### patch()
 
-> **patch**(`locationId`, `data`, `updateMask`): `Promise`\<`any`>>\>
+> **patch**(`locationId`, `data`, `updateMask`): `Promise`\<`any`>\>
 
 Updates an existing location.
 
@@ -254,7 +254,7 @@ Updates an existing location.
 
 ### patchAttributes()
 
-> **patchAttributes**(`locationId`, `data`, `attributeMask`): `Promise`\<`any`>>\>
+> **patchAttributes**(`locationId`, `data`, `attributeMask`): `Promise`\<`any`>\>
 
 Updates attributes for a location.
 
@@ -280,7 +280,7 @@ Updates attributes for a location.
 
 ### updateServiceItems()
 
-> **updateServiceItems**(`locationId`, `serviceItems`): `Promise`\<`any`>>\>
+> **updateServiceItems**(`locationId`, `serviceItems`): `Promise`\<`any`>\>
 
 Updates service items for a location.
 

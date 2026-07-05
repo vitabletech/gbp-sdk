@@ -48,7 +48,7 @@ Uploads multiple media items for a location concurrently.
 
 ### create()
 
-> **create**(`accountId`, `locationId`, `data`): `Promise`\<`any`>>\>
+> **create**(`accountId`, `locationId`, `data`): `Promise`\<`any`>\>
 
 Creates/Uploads a new media item for a location.
 
@@ -74,7 +74,7 @@ Creates/Uploads a new media item for a location.
 
 ### delete()
 
-> **delete**(`accountId`, `locationId`, `mediaKey`): `Promise`\<`void`>>\>
+> **delete**(`accountId`, `locationId`, `mediaKey`): `Promise`\<`void`>\>
 
 Deletes a media item.
 
@@ -100,7 +100,7 @@ Deletes a media item.
 
 ### get()
 
-> **get**(`accountId`, `locationId`, `mediaKey`): `Promise`\<`any`>>\>
+> **get**(`accountId`, `locationId`, `mediaKey`): `Promise`\<`any`>\>
 
 Gets a specific media item.
 
@@ -126,7 +126,7 @@ Gets a specific media item.
 
 ### list()
 
-> **list**(`accountId`, `locationId`, `options?`): `Promise`\<`any`>>\>
+> **list**(`accountId`, `locationId`, `options?`): `Promise`\<`any`>\>
 
 Lists all media items for a location.
 
@@ -154,7 +154,7 @@ Lists all media items for a location.
 
 ### patch()
 
-> **patch**(`accountId`, `locationId`, `mediaKey`, `data`, `updateMask?`): `Promise`\<`any`>>\>
+> **patch**(`accountId`, `locationId`, `mediaKey`, `data`, `updateMask?`): `Promise`\<`any`>\>
 
 Updates metadata of the specified media item.
 Note: This can only be used to update the Category of a media item, with the exception that the new category cannot be COVER or PROFILE.

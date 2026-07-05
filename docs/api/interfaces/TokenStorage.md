@@ -6,7 +6,7 @@
 
 ### clearTokens()
 
-> **clearTokens**(): `Promise`\<`void`>>\>
+> **clearTokens**(): `Promise`\<`void`>\>
 
 #### Returns
 
@@ -16,7 +16,7 @@
 
 ### getRefreshToken()
 
-> **getRefreshToken**(): `Promise`\<`string` \| `null`>>\>
+> **getRefreshToken**(): `Promise`\<`string` \| `null`>\>
 
 #### Returns
 
@@ -26,7 +26,7 @@
 
 ### getToken()
 
-> **getToken**(): `Promise`\<`string` \| `null`>>\>
+> **getToken**(): `Promise`\<`string` \| `null`>\>
 
 #### Returns
 
@@ -36,7 +36,7 @@
 
 ### setRefreshToken()
 
-> **setRefreshToken**(`token`): `Promise`\<`void`>>\>
+> **setRefreshToken**(`token`): `Promise`\<`void`>\>
 
 #### Parameters
 
@@ -52,7 +52,7 @@
 
 ### setToken()
 
-> **setToken**(`token`, `expiresIn`): `Promise`\<`void`>>\>
+> **setToken**(`token`, `expiresIn`): `Promise`\<`void`>\>
 
 #### Parameters
 

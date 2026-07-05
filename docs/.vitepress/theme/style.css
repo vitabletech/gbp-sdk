@@ -70,28 +70,6 @@ body {
     );
 }
 
-/* Increase the hero image size */
-.VPHero .image-container {
-  max-width: 600px !important; /* Increase from default */
-  width: 120% !important; /* Make it overflow its container slightly */
-  transform: translateX(-10%); /* Re-center it */
-}
-
-@media (min-width: 960px) {
-  .VPHero .image-container {
-    max-width: 800px !important;
-    width: 140% !important;
-    transform: translateX(-15%);
-  }
-}
-
-.VPHero .image-src {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
 /* Make action buttons pop */
 .VPButton.brand {
   background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%);

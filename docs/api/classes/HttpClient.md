@@ -12,7 +12,7 @@
 
 ##### tokenManager
 
-`TokenManager`
+[`TokenManager`](TokenManager.md)
 
 ##### config
 
@@ -32,7 +32,7 @@
 
 ### request()
 
-> **request**\<`T`>>\>(`options`): `Promise`\<`T`>>\>
+> **request**\<`T`>\>(`options`): `Promise`\<`T`>\>
 
 #### Type Parameters
 

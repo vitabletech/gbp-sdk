@@ -4,6 +4,8 @@ export * from './errors/GBPApiError';
 export * from './utils/Logger';
 export * from './authentication/MemoryTokenStorage';
 export * from './authentication/FileTokenStorage';
+export * from './authentication/TokenManager';
+export * from './authentication/OAuthClient';
 export * from './clients/GBPClient';
 export * from './utils/CursorPaginator';
 

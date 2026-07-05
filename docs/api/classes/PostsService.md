@@ -22,7 +22,7 @@
 
 ### create()
 
-> **create**(`locationId`, `data`): `Promise`\<`any`>>\>
+> **create**(`locationId`, `data`): `Promise`\<`any`>\>
 
 Creates a new local post.
 
@@ -44,7 +44,7 @@ Creates a new local post.
 
 ### delete()
 
-> **delete**(`locationId`, `localPostId`): `Promise`\<`void`>>\>
+> **delete**(`locationId`, `localPostId`): `Promise`\<`void`>\>
 
 Deletes a local post.
 
@@ -66,7 +66,7 @@ Deletes a local post.
 
 ### get()
 
-> **get**(`locationId`, `localPostId`): `Promise`\<`any`>>\>
+> **get**(`locationId`, `localPostId`): `Promise`\<`any`>\>
 
 Gets a specific local post.
 
@@ -88,7 +88,7 @@ Gets a specific local post.
 
 ### list()
 
-> **list**(`locationId`, `options?`): `Promise`\<`any`>>\>
+> **list**(`locationId`, `options?`): `Promise`\<`any`>\>
 
 Lists all local posts for a location.
 
@@ -112,7 +112,7 @@ Lists all local posts for a location.
 
 ### patch()
 
-> **patch**(`locationId`, `localPostId`, `data`, `updateMask`): `Promise`\<`any`>>\>
+> **patch**(`locationId`, `localPostId`, `data`, `updateMask`): `Promise`\<`any`>\>
 
 Updates an existing local post.
 

@@ -104,7 +104,7 @@ Generates the OAuth 2.0 authorization URL for user consent.
 
 ### getTokenInfo()
 
-> **getTokenInfo**(): `Promise`\<`any`>>\>
+> **getTokenInfo**(): `Promise`\<`any`>\>
 
 Retrieves information about the current access token, such as its expiration time, scopes, and app ID.
 
@@ -116,7 +116,7 @@ Retrieves information about the current access token, such as its expiration tim
 
 ### processAuthCode()
 
-> **processAuthCode**(`code`): `Promise`\<`void`>>\>
+> **processAuthCode**(`code`): `Promise`\<`void`>\>
 
 Processes an OAuth 2.0 authorization code to fetch and store tokens.
 
@@ -134,7 +134,7 @@ Processes an OAuth 2.0 authorization code to fetch and store tokens.
 
 ### request()
 
-> **request**\<`T`>>\>(`options`): `Promise`\<`T`>>\>
+> **request**\<`T`>\>(`options`): `Promise`\<`T`>\>
 
 Generic request method for unsupported or custom API endpoints.
 This allows developers to use newly released Google APIs immediately.
