@@ -22,7 +22,7 @@
 
 ### list()
 
-> **list**(`options?`): `Promise`\<`any`>>\>
+> **list**(`options?`): `Promise`\<`any`>\>
 
 Returns a list of business categories.
 
@@ -54,7 +54,7 @@ Returns a list of business categories.
 
 ### search()
 
-> **search**(`options`): `Promise`\<`any`>>\>
+> **search**(`options`): `Promise`\<`any`>\>
 
 Searches for categories.
 

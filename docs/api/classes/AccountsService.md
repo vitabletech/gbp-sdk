@@ -22,7 +22,7 @@
 
 ### get()
 
-> **get**(`accountId`): `Promise`\<`any`>>\>
+> **get**(`accountId`): `Promise`\<`any`>\>
 
 Gets a specific account by ID.
 
@@ -40,7 +40,7 @@ Gets a specific account by ID.
 
 ### list()
 
-> **list**(`options?`): `Promise`\<`any`>>\>
+> **list**(`options?`): `Promise`\<`any`>\>
 
 Lists all Google Business Profile accounts for the authenticated user.
 

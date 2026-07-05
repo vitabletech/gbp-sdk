@@ -22,7 +22,7 @@
 
 ### list()
 
-> **list**(`options`): `Promise`\<`any`>>\>
+> **list**(`options`): `Promise`\<`any`>\>
 
 Returns the list of attributes that would be available for a location with the given primary category and country.
 
@@ -66,7 +66,7 @@ Returns the list of attributes that would be available for a location with the g
 
 ### updateFacebookUrl()
 
-> **updateFacebookUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateFacebookUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -86,7 +86,7 @@ Returns the list of attributes that would be available for a location with the g
 
 ### updateInstagramUrl()
 
-> **updateInstagramUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateInstagramUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -106,7 +106,7 @@ Returns the list of attributes that would be available for a location with the g
 
 ### updateLinkedInUrl()
 
-> **updateLinkedInUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateLinkedInUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -126,7 +126,7 @@ Returns the list of attributes that would be available for a location with the g
 
 ### updateLocationAttributes()
 
-> **updateLocationAttributes**(`locationId`, `attributes`): `Promise`\<`any`>>\>
+> **updateLocationAttributes**(`locationId`, `attributes`): `Promise`\<`any`>\>
 
 Automatically prepares and updates the attributes for a given location.
 Takes an array of attributes and constructs the appropriate API payload and attributeMask.
@@ -153,7 +153,7 @@ An array of attribute objects to update.
 
 ### updatePinterestUrl()
 
-> **updatePinterestUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updatePinterestUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -173,7 +173,7 @@ An array of attribute objects to update.
 
 ### updatePreferredMessagingService()
 
-> **updatePreferredMessagingService**(`locationId`, `service`): `Promise`\<`any`>>\>
+> **updatePreferredMessagingService**(`locationId`, `service`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -193,7 +193,7 @@ An array of attribute objects to update.
 
 ### updateTextMessagingUrl()
 
-> **updateTextMessagingUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateTextMessagingUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -213,7 +213,7 @@ An array of attribute objects to update.
 
 ### updateTikTokUrl()
 
-> **updateTikTokUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateTikTokUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -233,7 +233,7 @@ An array of attribute objects to update.
 
 ### updateTwitterUrl()
 
-> **updateTwitterUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateTwitterUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 
@@ -253,7 +253,7 @@ An array of attribute objects to update.
 
 ### updateWhatsAppUrl()
 
-> **updateWhatsAppUrl**(`locationId`, `whatsappUrl`): `Promise`\<`any`>>\>
+> **updateWhatsAppUrl**(`locationId`, `whatsappUrl`): `Promise`\<`any`>\>
 
 Specifically sets the WhatsApp URL for a location.
 
@@ -279,7 +279,7 @@ The WhatsApp URL (e.g. "https://wa.me/55555555").
 
 ### updateYouTubeUrl()
 
-> **updateYouTubeUrl**(`locationId`, `url`): `Promise`\<`any`>>\>
+> **updateYouTubeUrl**(`locationId`, `url`): `Promise`\<`any`>\>
 
 #### Parameters
 

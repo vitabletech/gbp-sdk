@@ -12,7 +12,7 @@
 
 ### Constructor
 
-> **new CursorPaginator**\<`T`>>\>(`client`, `endpoint`, `itemsKey`, `queryParams?`): `CursorPaginator`\<`T`>>\>
+> **new CursorPaginator**\<`T`>\>(`client`, `endpoint`, `itemsKey`, `queryParams?`): `CursorPaginator`\<`T`>\>
 
 #### Parameters
 

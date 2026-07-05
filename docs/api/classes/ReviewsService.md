@@ -22,7 +22,7 @@
 
 ### deleteReply()
 
-> **deleteReply**(`accountId`, `locationId`, `reviewId`): `Promise`\<`void`>>\>
+> **deleteReply**(`accountId`, `locationId`, `reviewId`): `Promise`\<`void`>\>
 
 Deletes a reply to a review.
 
@@ -48,7 +48,7 @@ Deletes a reply to a review.
 
 ### get()
 
-> **get**(`accountId`, `locationId`, `reviewId`): `Promise`\<`any`>>\>
+> **get**(`accountId`, `locationId`, `reviewId`): `Promise`\<`any`>\>
 
 Gets a specific review by ID.
 
@@ -74,7 +74,7 @@ Gets a specific review by ID.
 
 ### list()
 
-> **list**(`accountId`, `locationId`, `options?`): `Promise`\<`any`>>\>
+> **list**(`accountId`, `locationId`, `options?`): `Promise`\<`any`>\>
 
 Lists all reviews for a location.
 
@@ -124,7 +124,7 @@ Automatically fetches all reviews for a location.
 
 ### listPaginator()
 
-> **listPaginator**(`accountId`, `locationId`, `options?`): [`CursorPaginator`](CursorPaginator.md)\<`any`>>\>
+> **listPaginator**(`accountId`, `locationId`, `options?`): [`CursorPaginator`](CursorPaginator.md)\<`any`>\>
 
 Returns a paginator object to manually fetch reviews page by page.
 
@@ -152,7 +152,7 @@ Returns a paginator object to manually fetch reviews page by page.
 
 ### reply()
 
-> **reply**(`accountId`, `locationId`, `reviewId`, `reply`): `Promise`\<`any`>>\>
+> **reply**(`accountId`, `locationId`, `reviewId`, `reply`): `Promise`\<`any`>\>
 
 Replies to a review.
 

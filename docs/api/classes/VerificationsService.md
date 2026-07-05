@@ -22,7 +22,7 @@
 
 ### complete()
 
-> **complete**(`locationId`, `verificationId`, `request`): `Promise`\<[`CompleteVerificationResponse`](../interfaces/CompleteVerificationResponse.md)>>\>
+> **complete**(`locationId`, `verificationId`, `request`): `Promise`\<[`CompleteVerificationResponse`](../interfaces/CompleteVerificationResponse.md)>\>
 
 Completes a PENDING verification using a PIN.
 
@@ -54,7 +54,7 @@ The CompleteVerificationRequest containing the PIN.
 
 ### fetchVerificationOptions()
 
-> **fetchVerificationOptions**(`locationId`, `request`): `Promise`\<[`FetchVerificationOptionsResponse`](../interfaces/FetchVerificationOptionsResponse.md)>>\>
+> **fetchVerificationOptions**(`locationId`, `request`): `Promise`\<[`FetchVerificationOptionsResponse`](../interfaces/FetchVerificationOptionsResponse.md)>\>
 
 Reports all eligible verification options for a location in a specific language.
 
@@ -80,7 +80,7 @@ The FetchVerificationOptionsRequest containing language code and optional contex
 
 ### getVoiceOfMerchantState()
 
-> **getVoiceOfMerchantState**(`locationId`): `Promise`\<[`VoiceOfMerchantState`](../interfaces/VoiceOfMerchantState.md)>>\>
+> **getVoiceOfMerchantState**(`locationId`): `Promise`\<[`VoiceOfMerchantState`](../interfaces/VoiceOfMerchantState.md)>\>
 
 Gets the VoiceOfMerchant state.
 
@@ -100,7 +100,7 @@ The location to get VoiceOfMerchant state for.
 
 ### list()
 
-> **list**(`locationId`): `Promise`\<[`ListVerificationsResponse`](../interfaces/ListVerificationsResponse.md)>>\>
+> **list**(`locationId`): `Promise`\<[`ListVerificationsResponse`](../interfaces/ListVerificationsResponse.md)>\>
 
 List verifications of a location, ordered by create time.
 
@@ -120,7 +120,7 @@ The location to list verifications for.
 
 ### verify()
 
-> **verify**(`locationId`, `request`): `Promise`\<[`VerifyLocationResponse`](../interfaces/VerifyLocationResponse.md)>>\>
+> **verify**(`locationId`, `request`): `Promise`\<[`VerifyLocationResponse`](../interfaces/VerifyLocationResponse.md)>\>
 
 Starts the verification process for a location.
 
