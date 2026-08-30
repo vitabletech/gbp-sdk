@@ -1,3 +1,8 @@
+---
+title: 'DateRange'
+description: 'API Reference documentation for DateRange in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

@@ -1,3 +1,8 @@
+---
+title: 'CursorPaginator'
+description: 'API Reference documentation for CursorPaginator in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

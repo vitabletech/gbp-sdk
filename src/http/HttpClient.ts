@@ -7,6 +7,8 @@ import {
   AuthenticationError,
   TimeoutError,
   NetworkError,
+  InsufficientScopeError,
+  IAMPermissionError,
 } from '../errors/GBPApiError';
 import { SilentLogger } from '../utils/Logger';
 
@@ -171,6 +173,27 @@ export class HttpClient {
     }
     if (status === 429) {
       return new RateLimitError(message, { code, url, method, responseBody });
+    }
+    if (status === 403) {
+      if (
+        message.includes('ACCESS_TOKEN_SCOPE_INSUFFICIENT') ||
+        message.includes('insufficient authentication scopes')
+      ) {
+        return new InsufficientScopeError(
+          `OAuth scope is missing. Quota access requires https://www.googleapis.com/auth/cloud-platform.read-only. You may need to re-authorize. Original error: ${message}`,
+          { code, url, method, responseBody }
+        );
+      }
+      if (
+        code === 'PERMISSION_DENIED' ||
+        message.includes('permission') ||
+        message.includes('IAM')
+      ) {
+        return new IAMPermissionError(
+          `Google Cloud IAM permission is missing. Original error: ${message}`,
+          { code, url, method, responseBody }
+        );
+      }
     }
 
     return new GBPApiError(message, status, {

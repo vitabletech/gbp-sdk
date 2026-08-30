@@ -1,3 +1,8 @@
+---
+title: 'globals'
+description: 'API Reference documentation for globals in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](index.md)
 
 ---
@@ -28,6 +33,8 @@
 - [GBPApiError](classes/GBPApiError.md)
 - [GBPClient](classes/GBPClient.md)
 - [HttpClient](classes/HttpClient.md)
+- [IAMPermissionError](classes/IAMPermissionError.md)
+- [InsufficientScopeError](classes/InsufficientScopeError.md)
 - [LocationsService](classes/LocationsService.md)
 - [MediaService](classes/MediaService.md)
 - [MemoryTokenStorage](classes/MemoryTokenStorage.md)
@@ -35,6 +42,7 @@
 - [NetworkError](classes/NetworkError.md)
 - [OAuthClient](classes/OAuthClient.md)
 - [PostsService](classes/PostsService.md)
+- [QuotasService](classes/QuotasService.md)
 - [RateLimitError](classes/RateLimitError.md)
 - [ReviewsService](classes/ReviewsService.md)
 - [SilentLogger](classes/SilentLogger.md)
@@ -68,11 +76,16 @@
 - [Logger](interfaces/Logger.md)
 - [MenuLabel](interfaces/MenuLabel.md)
 - [Money](interfaces/Money.md)
+- [NormalizedQuotasResponse](interfaces/NormalizedQuotasResponse.md)
 - [NutritionFact](interfaces/NutritionFact.md)
 - [NutritionFacts](interfaces/NutritionFacts.md)
 - [PerformanceMetricsRequest](interfaces/PerformanceMetricsRequest.md)
 - [PortionSize](interfaces/PortionSize.md)
 - [PostalAddress](interfaces/PostalAddress.md)
+- [QuotaBucket](interfaces/QuotaBucket.md)
+- [QuotaLimit](interfaces/QuotaLimit.md)
+- [QuotaMetric](interfaces/QuotaMetric.md)
+- [QuotaRequestOptions](interfaces/QuotaRequestOptions.md)
 - [RequestOptions](interfaces/RequestOptions.md)
 - [SearchChainsResponse](interfaces/SearchChainsResponse.md)
 - [ServiceBusinessContext](interfaces/ServiceBusinessContext.md)
@@ -82,3 +95,8 @@
 - [VerifyLocationRequest](interfaces/VerifyLocationRequest.md)
 - [VerifyLocationResponse](interfaces/VerifyLocationResponse.md)
 - [VoiceOfMerchantState](interfaces/VoiceOfMerchantState.md)
+
+## Variables
+
+- [GBP\_SCOPES](variables/GBP_SCOPES.md)
+- [GBP\_SERVICES](variables/GBP_SERVICES.md)

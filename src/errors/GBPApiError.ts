@@ -59,3 +59,19 @@ export class TimeoutError extends Error {
     Object.setPrototypeOf(this, TimeoutError.prototype);
   }
 }
+
+export class InsufficientScopeError extends GBPApiError {
+  constructor(message: string, options?: any) {
+    super(message, 403, options);
+    this.name = 'InsufficientScopeError';
+    Object.setPrototypeOf(this, InsufficientScopeError.prototype);
+  }
+}
+
+export class IAMPermissionError extends GBPApiError {
+  constructor(message: string, options?: any) {
+    super(message, 403, options);
+    this.name = 'IAMPermissionError';
+    Object.setPrototypeOf(this, IAMPermissionError.prototype);
+  }
+}

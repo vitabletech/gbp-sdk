@@ -1,3 +1,8 @@
+---
+title: 'GBPApiError'
+description: 'API Reference documentation for GBPApiError in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -10,6 +15,8 @@
 
 - [`AuthenticationError`](AuthenticationError.md)
 - [`RateLimitError`](RateLimitError.md)
+- [`InsufficientScopeError`](InsufficientScopeError.md)
+- [`IAMPermissionError`](IAMPermissionError.md)
 
 ## Constructors
 

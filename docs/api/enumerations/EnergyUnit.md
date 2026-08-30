@@ -1,3 +1,8 @@
+---
+title: 'EnergyUnit'
+description: 'API Reference documentation for EnergyUnit in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

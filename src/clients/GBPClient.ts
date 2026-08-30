@@ -11,6 +11,7 @@ import { MetricsService } from '../services/MetricsService';
 import { VerificationsService } from '../services/VerificationsService';
 import { ChainsService } from '../services/ChainsService';
 import { AttributesService } from '../services/AttributesService';
+import { QuotasService } from '../services/QuotasService';
 
 export class GBPClient {
   private tokenManager: TokenManager;
@@ -26,6 +27,7 @@ export class GBPClient {
   public verifications: VerificationsService;
   public chains: ChainsService;
   public attributes: AttributesService;
+  public quotas: QuotasService;
 
   constructor(config: GBPClientConfig) {
     this.tokenManager = new TokenManager(config);
@@ -42,6 +44,7 @@ export class GBPClient {
     this.verifications = new VerificationsService(this.httpClient);
     this.chains = new ChainsService(this.httpClient);
     this.attributes = new AttributesService(this.httpClient);
+    this.quotas = new QuotasService(this.httpClient);
   }
 
   /**
@@ -65,7 +68,7 @@ export class GBPClient {
   /**
    * Generates the OAuth 2.0 authorization URL for user consent.
    */
-  public getAuthorizationUrl(scopes: string[], state?: string): string {
+  public getAuthorizationUrl(scopes?: string[], state?: string): string {
     return this.tokenManager
       .getOAuthClient()
       .getAuthorizationUrl(scopes, state);

@@ -1,3 +1,8 @@
+---
+title: 'HttpClient'
+description: 'API Reference documentation for HttpClient in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

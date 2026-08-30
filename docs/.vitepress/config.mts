@@ -102,6 +102,7 @@ export default defineConfig({
         items: [
           { text: 'Accounts', link: '/api-reference/accounts' },
           { text: 'Locations', link: '/api-reference/locations' },
+          { text: 'Quotas', link: '/api-reference/quotas' },
           { text: 'Attributes', link: '/api-reference/attributes' },
           { text: 'Reviews', link: '/api-reference/reviews' },
           { text: 'Categories', link: '/api-reference/categories' },

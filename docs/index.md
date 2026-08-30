@@ -4,7 +4,7 @@ layout: home
 hero:
   name: 'GBP Node.js SDK'
   text: 'The Enterprise standard.'
-  tagline: 'Manage locations, menus, attributes, media, reviews, and verifications with zero-config OAuth, auto-pagination, and strict type safety.'
+  tagline: 'Manage locations, menus, attributes, media, reviews, verifications, and quotas with zero-config OAuth, auto-pagination, and strict type safety.'
   image:
     src: /Home-page.png
     alt: GBP SDK Hero Image
@@ -174,6 +174,7 @@ import { version } from '../package.json'
     <!-- First set -->
     <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
     <span class="marquee-item">✅ Native Verifications API</span>
+    <span class="marquee-item">📈 Quotas API Support</span>
     <span class="marquee-item">🔗 Official Chains API</span>
     <span class="marquee-item">🍔 Food Menus Types</span>
     <span class="marquee-item">📊 v1 Performance Metrics</span>
@@ -181,6 +182,7 @@ import { version } from '../package.json'
     <!-- Duplicate set for seamless scrolling -->
     <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
     <span class="marquee-item">✅ Native Verifications API</span>
+    <span class="marquee-item">📈 Quotas API Support</span>
     <span class="marquee-item">🔗 Official Chains API</span>
     <span class="marquee-item">🍔 Food Menus Types</span>
     <span class="marquee-item">📊 v1 Performance Metrics</span>
@@ -314,6 +316,7 @@ Version {{ version }} is our official production-ready release, bringing native 
 :::
 
 - **[Verifications API](/api-reference/verifications)**: Trigger phone, SMS, and postcard verifications natively (`mybusinessverifications.googleapis.com`).
+- **[Quotas API](/api-reference/quotas)**: Programmatically check your API Quotas to avoid hitting rate limits (`serviceusage.googleapis.com`).
 - **[Chains API](/api-reference/chains)**: Search global brands and associate your locations with corporate chains effortlessly.
 - **[Location Attributes](/guides/patch-vs-patchAttributes)**: Manage location amenities, flags, and attributes easily. Check out our guide on [`patchAttributes` vs `updateLocationAttributes`](/guides/patch-vs-patchAttributes) to choose the best method.
 - **Media Upload Upgrades**: The `MediaService` now fully supports Google's v4 endpoints and allows category updates via `patch()`.
