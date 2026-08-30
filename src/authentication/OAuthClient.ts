@@ -1,4 +1,4 @@
-import { GBPClientConfig, Logger } from '../types';
+import { GBPClientConfig, Logger, GBP_SCOPES } from '../types';
 import { AuthenticationError } from '../errors/GBPApiError';
 import { SilentLogger } from '../utils/Logger';
 
@@ -7,6 +7,8 @@ export class OAuthClient {
   private clientSecret: string;
   private redirectUri: string;
   private logger: Logger;
+  private scopes?: string[];
+  private enableQuotaAccess?: boolean;
   private tokenEndpoint = 'https://oauth2.googleapis.com/token';
   private authEndpoint = 'https://accounts.google.com/o/oauth2/v2/auth';
 
@@ -21,14 +23,29 @@ export class OAuthClient {
     this.redirectUri =
       config.redirectUri || 'http://localhost:3000/oauth2callback';
     this.logger = config.logger || new SilentLogger();
+    this.scopes = config.scopes;
+    this.enableQuotaAccess = config.enableQuotaAccess;
   }
 
-  public getAuthorizationUrl(scopes: string[], state?: string): string {
+  public getAuthorizationUrl(scopes?: string[], state?: string): string {
+    let finalScopes = scopes;
+
+    if (!finalScopes || finalScopes.length === 0) {
+      if (this.scopes && this.scopes.length > 0) {
+        finalScopes = this.scopes;
+      } else {
+        finalScopes = [GBP_SCOPES.businessManage];
+        if (this.enableQuotaAccess) {
+          finalScopes.push(GBP_SCOPES.cloudQuotaReadOnly);
+        }
+      }
+    }
+
     const params = new URLSearchParams({
       client_id: this.clientId,
       redirect_uri: this.redirectUri,
       response_type: 'code',
-      scope: scopes.join(' '),
+      scope: finalScopes.join(' '),
       access_type: 'offline',
       prompt: 'consent',
     });

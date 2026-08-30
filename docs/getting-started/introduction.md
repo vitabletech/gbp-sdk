@@ -24,6 +24,7 @@ This SDK allows you to programmatically manage exactly what your customers see w
 - **Auto Pagination**: Methods like `listAll()` abstract away `pageToken` loops, automatically fetching all resources.
 - **Enterprise Ready**: Built-in exponential backoff, retry policies, and comprehensive error handling.
 - **TypeScript First**: Full IntelliSense support and strict typing for request payloads and Google API responses.
+- **Full API Coverage**: Out-of-the-box support for Accounts, Locations, Reviews, Posts, Media, Categories, Verifications, Quotas, and Food Menus.
 
 ## Prerequisites
 

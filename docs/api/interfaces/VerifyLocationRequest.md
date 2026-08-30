@@ -1,3 +1,8 @@
+---
+title: 'VerifyLocationRequest'
+description: 'API Reference documentation for VerifyLocationRequest in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

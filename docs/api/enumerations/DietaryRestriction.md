@@ -1,3 +1,8 @@
+---
+title: 'DietaryRestriction'
+description: 'API Reference documentation for DietaryRestriction in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

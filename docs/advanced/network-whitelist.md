@@ -22,6 +22,10 @@ These endpoints are used to fetch and mutate data related to locations, categori
   - Domain: `mybusiness.googleapis.com`
   - Base URL: `https://mybusiness.googleapis.com/v4/`
 
+- **Quotas & Service Usage**
+  - Domain: `serviceusage.googleapis.com`
+  - Base URL: `https://serviceusage.googleapis.com/v1beta1/`
+
 ## Google OAuth & Authentication
 
 These endpoints are used to manage authentication, generate tokens, refresh expired tokens, and validate token status.
@@ -42,5 +46,6 @@ These endpoints are used to manage authentication, generate tokens, refresh expi
 - `mybusinessbusinessinformation.googleapis.com`
 - `mybusinessaccountmanagement.googleapis.com`
 - `mybusiness.googleapis.com`
+- `serviceusage.googleapis.com`
 - `accounts.google.com`
 - `oauth2.googleapis.com`

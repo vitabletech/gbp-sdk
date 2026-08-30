@@ -21,3 +21,4 @@ export * from './services/MetricsService';
 export * from './services/PostsService';
 export * from './services/ReviewsService';
 export * from './services/VerificationsService';
+export * from './services/QuotasService';

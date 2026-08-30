@@ -1,3 +1,8 @@
+---
+title: 'AccountsService'
+description: 'API Reference documentation for AccountsService in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

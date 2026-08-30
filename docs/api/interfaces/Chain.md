@@ -1,3 +1,8 @@
+---
+title: 'Chain'
+description: 'API Reference documentation for Chain in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

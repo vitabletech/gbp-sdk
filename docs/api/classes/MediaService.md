@@ -1,3 +1,8 @@
+---
+title: 'MediaService'
+description: 'API Reference documentation for MediaService in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

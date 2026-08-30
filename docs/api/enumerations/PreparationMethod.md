@@ -1,3 +1,8 @@
+---
+title: 'PreparationMethod'
+description: 'API Reference documentation for PreparationMethod in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

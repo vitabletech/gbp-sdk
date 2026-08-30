@@ -1,3 +1,8 @@
+---
+title: 'MenuLabel'
+description: 'API Reference documentation for MenuLabel in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

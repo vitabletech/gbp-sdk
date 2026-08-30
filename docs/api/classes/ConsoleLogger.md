@@ -1,3 +1,8 @@
+---
+title: 'ConsoleLogger'
+description: 'API Reference documentation for ConsoleLogger in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

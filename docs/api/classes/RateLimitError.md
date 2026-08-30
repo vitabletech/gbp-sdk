@@ -1,3 +1,8 @@
+---
+title: 'RateLimitError'
+description: 'API Reference documentation for RateLimitError in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

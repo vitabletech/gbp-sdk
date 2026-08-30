@@ -1,3 +1,8 @@
+---
+title: 'GBPClient'
+description: 'API Reference documentation for GBPClient in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -68,6 +73,12 @@
 
 ---
 
+### quotas
+
+> **quotas**: [`QuotasService`](QuotasService.md)
+
+---
+
 ### reviews
 
 > **reviews**: [`ReviewsService`](ReviewsService.md)
@@ -82,13 +93,13 @@
 
 ### getAuthorizationUrl()
 
-> **getAuthorizationUrl**(`scopes`, `state?`): `string`
+> **getAuthorizationUrl**(`scopes?`, `state?`): `string`
 
 Generates the OAuth 2.0 authorization URL for user consent.
 
 #### Parameters
 
-##### scopes
+##### scopes?
 
 `string`[]
 

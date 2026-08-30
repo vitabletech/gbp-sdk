@@ -1,3 +1,8 @@
+---
+title: 'DailyRange'
+description: 'API Reference documentation for DailyRange in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

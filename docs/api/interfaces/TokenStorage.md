@@ -1,3 +1,8 @@
+---
+title: 'TokenStorage'
+description: 'API Reference documentation for TokenStorage in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

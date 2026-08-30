@@ -3,6 +3,8 @@ export interface GBPClientConfig {
   clientSecret: string;
   redirectUri?: string;
   refreshToken?: string;
+  scopes?: string[];
+  enableQuotaAccess?: boolean;
   tokenStorage?: 'memory' | 'file' | TokenStorage;
   tokenFilePath?: string;
   logger?: Logger;
@@ -33,4 +35,48 @@ export interface RequestOptions extends Omit<RequestInit, 'body'> {
   headers?: Record<string, string>;
   timeoutMs?: number;
   retries?: number;
+}
+
+export const GBP_SCOPES = {
+  businessManage: 'https://www.googleapis.com/auth/business.manage',
+  cloudQuotaReadOnly:
+    'https://www.googleapis.com/auth/cloud-platform.read-only',
+};
+
+export const GBP_SERVICES = {
+  businessInformation: 'mybusinessbusinessinformation.googleapis.com',
+  accountManagement: 'mybusinessaccountmanagement.googleapis.com',
+  verifications: 'mybusinessverifications.googleapis.com',
+  qanda: 'mybusinessqanda.googleapis.com',
+  lodging: 'mybusinesslodging.googleapis.com',
+  placeActions: 'mybusinessplaceactions.googleapis.com',
+  legacy: 'mybusiness.googleapis.com',
+};
+
+export interface QuotaRequestOptions {
+  projectId: string;
+  service: string;
+}
+
+export interface QuotaLimit {
+  value: string;
+}
+
+export interface QuotaBucket {
+  effectiveLimit?: string;
+  defaultLimit?: string;
+  dimensions?: Record<string, string>;
+}
+
+export interface QuotaMetric {
+  metric: string;
+  displayName: string;
+  limit: number | null;
+  unit: string;
+}
+
+export interface NormalizedQuotasResponse {
+  projectId: string;
+  service: string;
+  quotas: QuotaMetric[];
 }

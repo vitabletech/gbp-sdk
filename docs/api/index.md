@@ -1,3 +1,8 @@
+---
+title: '@vitabletech/gbp-sdk'
+description: 'API Reference documentation for @vitabletech/gbp-sdk.'
+---
+
 **@vitabletech/gbp-sdk**
 
 ---
@@ -41,6 +46,7 @@ If you are running this SDK behind a strict corporate firewall, please ensure yo
 - **Chains API**: Find global brands and associate your locations with them easily via `ChainsService`.
 - **Network Whitelisting**: Added comprehensive network whitelist documentation for enterprise users.
 - **Food Menus & Metrics Types**: Added complete, strict TypeScript interfaces for the Google Business Profile `FoodMenus` and `Metrics` APIs.
+- **Quota Management**: Check API quotas and limits using `QuotasService` without risking hitting limits unexpectedly.
 
 ## Quick Start
 
@@ -148,6 +154,36 @@ When using `client.locations.create()`, you must pass a valid location object. H
   "profile": {
     "description": "Your RO - Retail Outlet."
   }
+}
+```
+
+## Reading API Quotas
+
+You can programmatically retrieve Google Service Usage quotas using the SDK. This is useful for monitoring limits, such as Location creation limits.
+Note: this retrieves quota configuration/limits, not necessarily your current usage.
+
+### Quota OAuth Scopes
+
+Reading quotas requires the `https://www.googleapis.com/auth/cloud-platform.read-only` scope in addition to the standard `business.manage` scope. Also, the user must have appropriate IAM permissions on the target Google Cloud project to read quotas.
+
+> **Important:** If you add `enableQuotaAccess`, existing authorized users may need to re-consent to grant the new scope.
+
+```typescript
+const client = new GBPClient({
+  clientId: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
+  enableQuotaAccess: true, // Opt-in to request the quota scope during OAuth flow
+});
+
+async function checkQuotas() {
+  const quotas = await client.quotas.get({
+    projectId: 'YOUR_PROJECT_ID_OR_NUMBER',
+    service: 'mybusinessbusinessinformation.googleapis.com',
+  });
+
+  console.log(quotas.quotas);
+  // [ { metric: '...', displayName: 'Create Location requests per day', limit: 100, unit: '1/d' } ]
 }
 ```
 

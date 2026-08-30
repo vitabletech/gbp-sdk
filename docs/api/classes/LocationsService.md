@@ -1,3 +1,8 @@
+---
+title: 'LocationsService'
+description: 'API Reference documentation for LocationsService in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

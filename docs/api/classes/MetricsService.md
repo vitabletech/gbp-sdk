@@ -1,3 +1,8 @@
+---
+title: 'MetricsService'
+description: 'API Reference documentation for MetricsService in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

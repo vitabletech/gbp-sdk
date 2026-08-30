@@ -1,3 +1,8 @@
+---
+title: 'GBPClientConfig'
+description: 'API Reference documentation for GBPClientConfig in the @vitabletech/gbp-sdk.'
+---
+
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -13,6 +18,12 @@
 ### clientSecret
 
 > **clientSecret**: `string`
+
+---
+
+### enableQuotaAccess?
+
+> `optional` **enableQuotaAccess?**: `boolean`
 
 ---
 
@@ -37,6 +48,12 @@
 ### refreshToken?
 
 > `optional` **refreshToken?**: `string`
+
+---
+
+### scopes?
+
+> `optional` **scopes?**: `string`[]
 
 ---
 
