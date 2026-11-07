@@ -1,8 +1,3 @@
----
-title: 'QuotaBucket'
-description: 'API Reference documentation for QuotaBucket in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

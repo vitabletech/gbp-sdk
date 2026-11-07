@@ -1,8 +1,3 @@
----
-title: 'CategoriesService'
-description: 'API Reference documentation for CategoriesService in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

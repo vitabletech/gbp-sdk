@@ -275,3 +275,101 @@ const updateResponse = await client.locations.updateServiceItems(
 ```
 
 [Reference: updateMask=serviceItems](https://developers.google.com/my-business/reference/businessinformation/rest/v1/locations/patch)
+
+---
+
+## Performance & Metrics Methods
+
+The `LocationsService` also provides direct convenience shortcuts to the **Business Profile Performance API (v1)**. For full schema details and options, see the [Metrics Reference](/api-reference/metrics).
+
+### `getDailyMetricsTimeSeries(locationId, request)`
+
+Returns daily metrics time series for a single metric over a specified date range.
+
+```typescript
+import { DailyMetric } from '@vitabletech/gbp-sdk';
+
+const timeSeries = await client.locations.getDailyMetricsTimeSeries(
+  'locations/12345',
+  {
+    dailyMetric: DailyMetric.WEBSITE_CLICKS,
+    dailyRange: {
+      startDate: { year: 2024, month: 1, day: 1 },
+      endDate: { year: 2024, month: 1, day: 31 },
+    },
+  }
+);
+```
+
+---
+
+### `fetchMultiDailyMetricsTimeSeries(locationId, request)`
+
+Returns time series reports for multiple daily metrics across a specified date range.
+
+```typescript
+import { DailyMetric } from '@vitabletech/gbp-sdk';
+
+const report = await client.locations.fetchMultiDailyMetricsTimeSeries(
+  'locations/12345',
+  {
+    dailyMetrics: [
+      DailyMetric.BUSINESS_IMPRESSIONS_DESKTOP_MAPS,
+      DailyMetric.CALL_CLICKS,
+    ],
+    dailyRange: {
+      startDate: { year: 2024, month: 1, day: 1 },
+      endDate: { year: 2024, month: 1, day: 31 },
+    },
+  }
+);
+```
+
+---
+
+### `listSearchKeywordsImpressionsMonthly(locationId, request)`
+
+Returns search terms used by customers along with monthly impression counts.
+
+```typescript
+const keywords = await client.locations.listSearchKeywordsImpressionsMonthly(
+  '12345',
+  {
+    monthlyRange: {
+      startMonth: { year: 2024, month: 1 },
+      endMonth: { year: 2024, month: 3 },
+    },
+    pageSize: 100,
+  }
+);
+```
+
+You can also use the exact REST resource syntax:
+
+```typescript
+const keywords = await client.locations.searchkeywords.impressions.monthly.list(
+  '12345',
+  {
+    monthlyRange: {
+      startMonth: { year: 2024, month: 1 },
+      endMonth: { year: 2024, month: 3 },
+    },
+  }
+);
+```
+
+---
+
+### `listAllSearchKeywordsImpressionsMonthly(locationId, request)`
+
+Automatically traverses all pages using `nextPageToken` and returns all keyword counts in a single array.
+
+```typescript
+const allKeywords =
+  await client.locations.listAllSearchKeywordsImpressionsMonthly('12345', {
+    monthlyRange: {
+      startMonth: { year: 2024, month: 1 },
+      endMonth: { year: 2024, month: 3 },
+    },
+  });
+```

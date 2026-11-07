@@ -1,17 +1,12 @@
----
-title: 'DateRange'
-description: 'API Reference documentation for DateRange in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
 
 ## Properties
 
-### day
+### day?
 
-> **day**: `number`
+> `optional` **day?**: `number`
 
 ---
 

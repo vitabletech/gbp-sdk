@@ -1,8 +1,3 @@
----
-title: 'IAMPermissionError'
-description: 'API Reference documentation for IAMPermissionError in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

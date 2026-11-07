@@ -1,8 +1,3 @@
----
-title: 'QuotaRequestOptions'
-description: 'API Reference documentation for QuotaRequestOptions in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

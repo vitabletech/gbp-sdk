@@ -121,6 +121,15 @@ export class QuotasService {
     return this.get({ projectId, service: 'mybusiness.googleapis.com' });
   }
 
+  public async getPerformance(
+    projectId: string
+  ): Promise<NormalizedQuotasResponse> {
+    return this.get({
+      projectId,
+      service: 'businessprofileperformance.googleapis.com',
+    });
+  }
+
   private normalizeQuotas(
     response: GoogleConsumerQuotaMetricsResponse
   ): QuotaMetric[] {

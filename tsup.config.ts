@@ -5,8 +5,8 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   dts: true,
   splitting: false,
-  sourcemap: true,
+  sourcemap: false,
   clean: true,
   treeshake: true,
-  minify: false, // Set to true for production if desired
+  minify: true, // Set to true for production if desired
 });

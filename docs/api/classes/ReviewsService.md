@@ -1,8 +1,3 @@
----
-title: 'ReviewsService'
-description: 'API Reference documentation for ReviewsService in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

@@ -1,8 +1,3 @@
----
-title: 'ChainsService'
-description: 'API Reference documentation for ChainsService in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

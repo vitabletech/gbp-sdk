@@ -1,8 +1,3 @@
----
-title: 'FoodMenuItemOption'
-description: 'API Reference documentation for FoodMenuItemOption in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

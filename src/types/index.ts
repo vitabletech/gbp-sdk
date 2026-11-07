@@ -51,6 +51,7 @@ export const GBP_SERVICES = {
   lodging: 'mybusinesslodging.googleapis.com',
   placeActions: 'mybusinessplaceactions.googleapis.com',
   legacy: 'mybusiness.googleapis.com',
+  performance: 'businessprofileperformance.googleapis.com',
 };
 
 export interface QuotaRequestOptions {

@@ -1,8 +1,3 @@
----
-title: 'NutritionFact'
-description: 'API Reference documentation for NutritionFact in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

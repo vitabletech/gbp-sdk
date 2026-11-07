@@ -1,8 +1,3 @@
----
-title: 'Verification'
-description: 'API Reference documentation for Verification in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

@@ -1,8 +1,3 @@
----
-title: 'MassUnit'
-description: 'API Reference documentation for MassUnit in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

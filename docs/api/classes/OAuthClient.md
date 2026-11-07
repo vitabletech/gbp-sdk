@@ -1,8 +1,3 @@
----
-title: 'OAuthClient'
-description: 'API Reference documentation for OAuthClient in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

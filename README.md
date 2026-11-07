@@ -15,7 +15,8 @@ Enterprise-grade Google Business Profile (GBP) SDK for Node.js, Next.js, and Typ
 - **Automatic Token Management**: Automatically handles refreshing access tokens when they expire. Thread-safe to prevent duplicate refresh requests.
 - **Pluggable Token Storage**: Supports memory, file, and custom token storage implementations (e.g. Redis).
 - **Robust HTTP Client**: Built-in exponential backoff, retry logic for 429 and 5xx errors, and rate limit handling.
-- **Auto-Pagination**: Provides `listAll` methods to automatically traverse `nextPageToken` and fetch all records.
+- **Auto-Pagination**: Provides `listAll` methods and cursor paginators to automatically traverse `nextPageToken` and fetch all records.
+- **Performance & Metrics API (v1)**: First-class native support for daily metric time series, multi-metric queries, and monthly search keyword impression counts.
 - **Strong Typing**: Full TypeScript support with generics.
 - **Generic Requests**: Exposes a `request()` method for unsupported or newly released Google APIs.
 
@@ -28,6 +29,15 @@ npm install @vitabletech/gbp-sdk
 ## Network Whitelist
 
 If you are running this SDK behind a strict corporate firewall, please ensure you whitelist the necessary Google API domains. See the [Network Whitelist Documentation](./docs/advanced/network-whitelist.md) for the complete list of domains and URLs.
+
+## What's New in v1.3.0 🎉
+
+- **Business Profile Performance API (v1)**: Full native integration with `businessprofileperformance.googleapis.com` via `MetricsService` and direct `client.locations` shortcuts.
+- **Daily Metrics Time Series**: New `locations.getDailyMetricsTimeSeries` method to fetch daily counts for calls, website clicks, directions, bookings, food orders, and impressions.
+- **Multi Daily Metrics Time Series**: Enhanced `locations.fetchMultiDailyMetricsTimeSeries` with support for sub-entity breakdowns (`dailySubEntityType`) and both camelCase (`startDate`/`endDate`) & snake_case dates.
+- **Monthly Search Keyword Impressions**: Track customer search terms with `locations.searchkeywords.impressions.monthly.list` / `listSearchKeywordsImpressionsMonthly`.
+- **Auto-Pagination for Keywords**: Built-in `listAllSearchKeywordsImpressionsMonthly` and `listSearchKeywordsImpressionsMonthlyPaginator`.
+- **Performance Quotas**: Direct `client.quotas.getPerformance(projectId)` to monitor Performance API rate limits and quotas.
 
 ## What's New in v1.0.0 🎉
 
@@ -66,6 +76,35 @@ async function main() {
 }
 
 main();
+```
+
+### Fetching Performance Metrics & Search Keywords
+
+```typescript
+import { DailyMetric } from '@vitabletech/gbp-sdk';
+
+// 1. Fetch daily metrics time series (e.g. Website Clicks)
+const dailyClicks = await client.locations.getDailyMetricsTimeSeries(
+  'locations/12345',
+  {
+    dailyMetric: DailyMetric.WEBSITE_CLICKS,
+    dailyRange: {
+      startDate: { year: 2024, month: 1, day: 1 },
+      endDate: { year: 2024, month: 1, day: 31 },
+    },
+  }
+);
+
+// 2. Fetch monthly search keywords with auto-pagination
+const keywords = await client.locations.listAllSearchKeywordsImpressionsMonthly(
+  'locations/12345',
+  {
+    monthlyRange: {
+      startMonth: { year: 2024, month: 1 },
+      endMonth: { year: 2024, month: 3 },
+    },
+  }
+);
 ```
 
 ### Creating a Location Example Payload

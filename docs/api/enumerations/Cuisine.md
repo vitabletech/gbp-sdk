@@ -1,8 +1,3 @@
----
-title: 'Cuisine'
-description: 'API Reference documentation for Cuisine in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

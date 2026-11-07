@@ -1,8 +1,3 @@
----
-title: 'MemoryTokenStorage'
-description: 'API Reference documentation for MemoryTokenStorage in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

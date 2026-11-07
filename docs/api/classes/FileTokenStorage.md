@@ -1,8 +1,3 @@
----
-title: 'FileTokenStorage'
-description: 'API Reference documentation for FileTokenStorage in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

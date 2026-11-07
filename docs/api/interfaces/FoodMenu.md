@@ -1,8 +1,3 @@
----
-title: 'FoodMenu'
-description: 'API Reference documentation for FoodMenu in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

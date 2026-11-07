@@ -26,6 +26,10 @@ These endpoints are used to fetch and mutate data related to locations, categori
   - Domain: `serviceusage.googleapis.com`
   - Base URL: `https://serviceusage.googleapis.com/v1beta1/`
 
+- **Performance & Metrics (Business Profile Performance API)**
+  - Domain: `businessprofileperformance.googleapis.com`
+  - Base URL: `https://businessprofileperformance.googleapis.com/v1/`
+
 ## Google OAuth & Authentication
 
 These endpoints are used to manage authentication, generate tokens, refresh expired tokens, and validate token status.
@@ -46,6 +50,7 @@ These endpoints are used to manage authentication, generate tokens, refresh expi
 - `mybusinessbusinessinformation.googleapis.com`
 - `mybusinessaccountmanagement.googleapis.com`
 - `mybusiness.googleapis.com`
+- `businessprofileperformance.googleapis.com`
 - `serviceusage.googleapis.com`
 - `accounts.google.com`
 - `oauth2.googleapis.com`

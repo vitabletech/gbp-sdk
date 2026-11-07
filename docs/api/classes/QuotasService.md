@@ -1,8 +1,3 @@
----
-title: 'QuotasService'
-description: 'API Reference documentation for QuotasService in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -98,6 +93,22 @@ A normalized array of quota limits.
 ### getLodging()
 
 > **getLodging**(`projectId`): `Promise`\<[`NormalizedQuotasResponse`](../interfaces/NormalizedQuotasResponse.md)>\>
+
+#### Parameters
+
+##### projectId
+
+`string`
+
+#### Returns
+
+`Promise`\<[`NormalizedQuotasResponse`](../interfaces/NormalizedQuotasResponse.md)\>
+
+---
+
+### getPerformance()
+
+> **getPerformance**(`projectId`): `Promise`\<[`NormalizedQuotasResponse`](../interfaces/NormalizedQuotasResponse.md)>\>
 
 #### Parameters
 
