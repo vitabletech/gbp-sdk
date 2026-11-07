@@ -1,20 +1,27 @@
----
-title: 'DailyRange'
-description: 'API Reference documentation for DailyRange in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
 
 ## Properties
 
-### end\_date
+### end\_date?
 
-> **end\_date**: [`DateRange`](DateRange.md)
+> `optional` **end\_date?**: [`DateRange`](DateRange.md)
 
 ---
 
-### start\_date
+### endDate?
 
-> **start\_date**: [`DateRange`](DateRange.md)
+> `optional` **endDate?**: [`DateRange`](DateRange.md)
+
+---
+
+### start\_date?
+
+> `optional` **start\_date?**: [`DateRange`](DateRange.md)
+
+---
+
+### startDate?
+
+> `optional` **startDate?**: [`DateRange`](DateRange.md)

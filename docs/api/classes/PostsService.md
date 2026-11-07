@@ -1,8 +1,3 @@
----
-title: 'PostsService'
-description: 'API Reference documentation for PostsService in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

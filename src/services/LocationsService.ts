@@ -1,6 +1,16 @@
 import { HttpClient } from '../http/HttpClient';
 import { AutoPaginator } from '../utils/AutoPaginator';
 import { CursorPaginator } from '../utils/CursorPaginator';
+import {
+  PerformanceMetricsRequest,
+  FetchMultiDailyMetricsTimeSeriesResponse,
+  GetDailyMetricsTimeSeriesRequest,
+  GetDailyMetricsTimeSeriesResponse,
+  ListSearchKeywordsImpressionsMonthlyRequest,
+  ListSearchKeywordsImpressionsMonthlyResponse,
+  SearchKeywordCount,
+} from '../models/Metrics';
+import { MetricsService } from './MetricsService';
 
 export class LocationsService {
   private client: HttpClient;
@@ -256,5 +266,106 @@ export class LocationsService {
       method: 'GET',
       query: { readMask: 'metadata' },
     });
+  }
+
+  /**
+   * Returns daily metrics time series for a location.
+   * Shortcut to MetricsService.getDailyMetricsTimeSeries.
+   *
+   * @param locationId The location ID.
+   * @param request The GetDailyMetricsTimeSeriesRequest containing dailyMetric, dailyRange, and optional dailySubEntityType.
+   */
+  public async getDailyMetricsTimeSeries(
+    locationId: string,
+    request: GetDailyMetricsTimeSeriesRequest
+  ): Promise<GetDailyMetricsTimeSeriesResponse> {
+    return new MetricsService(this.client).getDailyMetricsTimeSeries(
+      locationId,
+      request
+    );
+  }
+
+  /**
+   * Returns a report containing multi daily performance metrics for a location.
+   * Shortcut to MetricsService.fetchMultiDailyMetricsTimeSeries.
+   *
+   * @param locationId The location ID.
+   * @param request The PerformanceMetricsRequest containing dailyMetrics and dailyRange.
+   */
+  public async fetchMultiDailyMetricsTimeSeries(
+    locationId: string,
+    request: PerformanceMetricsRequest
+  ): Promise<FetchMultiDailyMetricsTimeSeriesResponse> {
+    return new MetricsService(this.client).fetchMultiDailyMetricsTimeSeries(
+      locationId,
+      request
+    );
+  }
+
+  /**
+   * Returns search keywords impressions monthly for a location.
+   * Shortcut to MetricsService.listSearchKeywordsImpressionsMonthly.
+   *
+   * @param locationId The location ID.
+   * @param request The ListSearchKeywordsImpressionsMonthlyRequest containing monthlyRange and pagination options.
+   */
+  public async listSearchKeywordsImpressionsMonthly(
+    locationId: string,
+    request: ListSearchKeywordsImpressionsMonthlyRequest
+  ): Promise<ListSearchKeywordsImpressionsMonthlyResponse> {
+    return new MetricsService(this.client).listSearchKeywordsImpressionsMonthly(
+      locationId,
+      request
+    );
+  }
+
+  /**
+   * Alias for listSearchKeywordsImpressionsMonthly.
+   */
+  public async getSearchKeywordsImpressionsMonthly(
+    locationId: string,
+    request: ListSearchKeywordsImpressionsMonthlyRequest
+  ): Promise<ListSearchKeywordsImpressionsMonthlyResponse> {
+    return this.listSearchKeywordsImpressionsMonthly(locationId, request);
+  }
+
+  /**
+   * Automatically fetches all search keywords impressions across all pages for a location.
+   * Shortcut to MetricsService.listAllSearchKeywordsImpressionsMonthly.
+   */
+  public async listAllSearchKeywordsImpressionsMonthly(
+    locationId: string,
+    request: Omit<ListSearchKeywordsImpressionsMonthlyRequest, 'pageToken'>
+  ): Promise<SearchKeywordCount[]> {
+    return new MetricsService(
+      this.client
+    ).listAllSearchKeywordsImpressionsMonthly(locationId, request);
+  }
+
+  /**
+   * Returns a cursor paginator to fetch search keywords impressions page by page for a location.
+   * Shortcut to MetricsService.listSearchKeywordsImpressionsMonthlyPaginator.
+   */
+  public listSearchKeywordsImpressionsMonthlyPaginator(
+    locationId: string,
+    request: ListSearchKeywordsImpressionsMonthlyRequest
+  ): CursorPaginator<SearchKeywordCount> {
+    return new MetricsService(
+      this.client
+    ).listSearchKeywordsImpressionsMonthlyPaginator(locationId, request);
+  }
+
+  /**
+   * REST resource accessor for locations.searchkeywords.impressions.monthly.
+   */
+  public get searchkeywords() {
+    return new MetricsService(this.client).searchkeywords;
+  }
+
+  /**
+   * CamelCase alias for searchkeywords REST resource accessor.
+   */
+  public get searchKeywords() {
+    return this.searchkeywords;
   }
 }

@@ -1,8 +1,3 @@
----
-title: 'GBPClient'
-description: 'API Reference documentation for GBPClient in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

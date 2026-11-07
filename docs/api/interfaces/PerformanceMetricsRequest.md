@@ -1,8 +1,3 @@
----
-title: 'PerformanceMetricsRequest'
-description: 'API Reference documentation for PerformanceMetricsRequest in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -18,3 +13,9 @@ description: 'API Reference documentation for PerformanceMetricsRequest in the @
 ### dailyRange
 
 > **dailyRange**: [`DailyRange`](DailyRange.md)
+
+---
+
+### dailySubEntityType?
+
+> `optional` **dailySubEntityType?**: [`DailySubEntityType`](DailySubEntityType.md)

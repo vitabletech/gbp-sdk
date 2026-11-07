@@ -1,8 +1,3 @@
----
-title: 'Spiciness'
-description: 'API Reference documentation for Spiciness in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

@@ -1,8 +1,3 @@
----
-title: 'DailyMetric'
-description: 'API Reference documentation for DailyMetric in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

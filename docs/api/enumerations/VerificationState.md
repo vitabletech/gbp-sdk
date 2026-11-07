@@ -1,8 +1,3 @@
----
-title: 'VerificationState'
-description: 'API Reference documentation for VerificationState in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

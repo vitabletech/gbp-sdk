@@ -111,7 +111,7 @@ export default defineConfig({
           { text: 'Verifications', link: '/api-reference/verifications' },
           { text: 'Chains', link: '/api-reference/chains' },
           { text: 'Food Menus (Types)', link: '/api-reference/food-menus' },
-          { text: 'Metrics (Types)', link: '/api-reference/metrics' },
+          { text: 'Metrics & Performance', link: '/api-reference/metrics' },
           { text: 'Raw Types (Auto)', link: '/api/' }
         ]
       },

@@ -1,8 +1,3 @@
----
-title: 'VoiceOfMerchantState'
-description: 'API Reference documentation for VoiceOfMerchantState in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

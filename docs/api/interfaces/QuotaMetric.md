@@ -1,8 +1,3 @@
----
-title: 'QuotaMetric'
-description: 'API Reference documentation for QuotaMetric in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

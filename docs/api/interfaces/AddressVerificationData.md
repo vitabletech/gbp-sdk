@@ -1,8 +1,3 @@
----
-title: 'AddressVerificationData'
-description: 'API Reference documentation for AddressVerificationData in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

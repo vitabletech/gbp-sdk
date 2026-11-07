@@ -1,8 +1,3 @@
----
-title: 'NormalizedQuotasResponse'
-description: 'API Reference documentation for NormalizedQuotasResponse in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

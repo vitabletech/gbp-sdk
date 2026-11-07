@@ -1,8 +1,3 @@
----
-title: 'TokenManager'
-description: 'API Reference documentation for TokenManager in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

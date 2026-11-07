@@ -1,8 +1,3 @@
----
-title: 'GBP_SERVICES'
-description: 'API Reference documentation for GBP_SERVICES in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
@@ -26,6 +21,10 @@ description: 'API Reference documentation for GBP_SERVICES in the @vitabletech/g
 ### lodging
 
 > **lodging**: `string` = `'mybusinesslodging.googleapis.com'`
+
+### performance
+
+> **performance**: `string` = `'businessprofileperformance.googleapis.com'`
 
 ### placeActions
 

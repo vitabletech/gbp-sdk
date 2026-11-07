@@ -173,19 +173,23 @@ import { version } from '../package.json'
   <div class="marquee-content">
     <!-- First set -->
     <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
+    <span class="marquee-item">📊 Performance Metrics v1</span>
+    <span class="marquee-item">🔍 Search Keywords Impressions</span>
+    <span class="marquee-item">📈 Multi Daily Metrics Time Series</span>
     <span class="marquee-item">✅ Native Verifications API</span>
     <span class="marquee-item">📈 Quotas API Support</span>
     <span class="marquee-item">🔗 Official Chains API</span>
     <span class="marquee-item">🍔 Food Menus Types</span>
-    <span class="marquee-item">📊 v1 Performance Metrics</span>
     <span class="marquee-item">🤖 Auto-Pagination Built-in!</span>
     <!-- Duplicate set for seamless scrolling -->
     <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
+    <span class="marquee-item">📊 Performance Metrics v1</span>
+    <span class="marquee-item">🔍 Search Keywords Impressions</span>
+    <span class="marquee-item">📈 Multi Daily Metrics Time Series</span>
     <span class="marquee-item">✅ Native Verifications API</span>
     <span class="marquee-item">📈 Quotas API Support</span>
     <span class="marquee-item">🔗 Official Chains API</span>
     <span class="marquee-item">🍔 Food Menus Types</span>
-    <span class="marquee-item">📊 v1 Performance Metrics</span>
     <span class="marquee-item">🤖 Auto-Pagination Built-in!</span>
   </div>
 </div>
@@ -198,6 +202,10 @@ import { version } from '../package.json'
   <div class="feature-card">
     <h3>🏪 Business Profiles</h3>
     <p>Manage accounts, fetch locations, update business hours, and handle special hours effortlessly across multiple locations.</p>
+  </div>
+  <div class="feature-card">
+    <h3>📊 Performance & Insights</h3>
+    <p>Fetch daily time series, desktop & mobile search/maps impressions, customer search keywords, and breakdowns via Business Profile Performance API v1.</p>
   </div>
   <div class="feature-card">
     <h3>🍔 Services & Menus</h3>
@@ -311,16 +319,23 @@ await client.attributes.patchAttributes(locations[0].name, {
 
 ## 🎉 What's New in v{{ version }}
 
-::: info 🚀 **Massive API Expansion & Stable Release!**
-Version {{ version }} is our official production-ready release, bringing native support for some of Google's most powerful enterprise APIs.
+::: info 🚀 **Performance API Expansion & v1.3.0 Release!**
+Version {{ version }} introduces first-class native support for Google's **Business Profile Performance API (v1)**, empowering applications with granular analytics, daily time series, keyword insights, and seamless auto-pagination.
 :::
 
+- **[Performance API v1 (`MetricsService`)](/api-reference/metrics)**:
+  - **Single Metric Daily Time Series**: Query `locations.getDailyMetricsTimeSeries` for precise daily counts (calls, website clicks, direction requests, bookings, food orders, impressions).
+  - **Multi Daily Metrics Time Series**: Query `locations.fetchMultiDailyMetricsTimeSeries` with support for `dailySubEntityType` breakdowns (day of week, time of day) and flexible camelCase (`startDate`/`endDate`) or snake_case dates.
+  - **Monthly Search Keywords Impressions**: Query `locations.searchkeywords.impressions.monthly.list` to discover exactly what search terms users typed to discover your business.
+  - **Auto-Pagination & Paginators**: Built-in `listAllSearchKeywordsImpressionsMonthly` (automatic traversal) and `listSearchKeywordsImpressionsMonthlyPaginator` (cursor-based traversal).
+  - **Convenient Location Shortcuts**: Access all performance methods directly from `client.locations.*` without separate service instantiations.
+  - **Native Performance Quotas**: Dedicated `client.quotas.getPerformance(projectId)` helper to check and monitor Performance API quotas.
 - **[Verifications API](/api-reference/verifications)**: Trigger phone, SMS, and postcard verifications natively (`mybusinessverifications.googleapis.com`).
 - **[Quotas API](/api-reference/quotas)**: Programmatically check your API Quotas to avoid hitting rate limits (`serviceusage.googleapis.com`).
 - **[Chains API](/api-reference/chains)**: Search global brands and associate your locations with corporate chains effortlessly.
 - **[Location Attributes](/guides/patch-vs-patchAttributes)**: Manage location amenities, flags, and attributes easily. Check out our guide on [`patchAttributes` vs `updateLocationAttributes`](/guides/patch-vs-patchAttributes) to choose the best method.
 - **Media Upload Upgrades**: The `MediaService` now fully supports Google's v4 endpoints and allows category updates via `patch()`.
-- **Enterprise Ready**: Added comprehensive [Network Whitelist](/advanced/network-whitelist) documentation to help enterprise IT teams unblock necessary domains.
+- **Enterprise Ready**: Comprehensive [Network Whitelist](/advanced/network-whitelist) documentation with `businessprofileperformance.googleapis.com` added.
 
 ---
 
@@ -329,6 +344,9 @@ Version {{ version }} is our official production-ready release, bringing native 
 <div class="grid-container">
   <a href="/api-reference/locations" class="feature-card feature-link">
     <h3>📍 Locations & Profiles &rarr;</h3>
+  </a>
+  <a href="/api-reference/metrics" class="feature-card feature-link">
+    <h3>📊 Performance & Metrics &rarr;</h3>
   </a>
   <a href="/api-reference/reviews" class="feature-card feature-link">
     <h3>💬 Reviews Management &rarr;</h3>
@@ -344,5 +362,8 @@ Version {{ version }} is our official production-ready release, bringing native 
   </a>
   <a href="/api-reference/verifications" class="feature-card feature-link">
     <h3>✅ Verifications API &rarr;</h3>
+  </a>
+  <a href="/api-reference/quotas" class="feature-card feature-link">
+    <h3>📈 Quotas Management &rarr;</h3>
   </a>
 </div>

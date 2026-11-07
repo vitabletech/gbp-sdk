@@ -1,8 +1,3 @@
----
-title: 'VerificationMethod'
-description: 'API Reference documentation for VerificationMethod in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

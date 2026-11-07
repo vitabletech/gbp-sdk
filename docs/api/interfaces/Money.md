@@ -1,8 +1,3 @@
----
-title: 'Money'
-description: 'API Reference documentation for Money in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

@@ -1,8 +1,3 @@
----
-title: 'GBP_SCOPES'
-description: 'API Reference documentation for GBP_SCOPES in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---

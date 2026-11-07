@@ -1,8 +1,3 @@
----
-title: 'globals'
-description: 'API Reference documentation for globals in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](index.md)
 
 ---
@@ -12,6 +7,7 @@ description: 'API Reference documentation for globals in the @vitabletech/gbp-sd
 - [Allergen](enumerations/Allergen.md)
 - [Cuisine](enumerations/Cuisine.md)
 - [DailyMetric](enumerations/DailyMetric.md)
+- [DayOfWeek](enumerations/DayOfWeek.md)
 - [DietaryRestriction](enumerations/DietaryRestriction.md)
 - [EnergyUnit](enumerations/EnergyUnit.md)
 - [MassUnit](enumerations/MassUnit.md)
@@ -59,9 +55,13 @@ description: 'API Reference documentation for globals in the @vitabletech/gbp-sd
 - [ChainUri](interfaces/ChainUri.md)
 - [CompleteVerificationRequest](interfaces/CompleteVerificationRequest.md)
 - [CompleteVerificationResponse](interfaces/CompleteVerificationResponse.md)
+- [DailyMetricTimeSeries](interfaces/DailyMetricTimeSeries.md)
 - [DailyRange](interfaces/DailyRange.md)
+- [DailySubEntityType](interfaces/DailySubEntityType.md)
+- [DatedValue](interfaces/DatedValue.md)
 - [DateRange](interfaces/DateRange.md)
 - [EmailVerificationData](interfaces/EmailVerificationData.md)
+- [FetchMultiDailyMetricsTimeSeriesResponse](interfaces/FetchMultiDailyMetricsTimeSeriesResponse.md)
 - [FetchVerificationOptionsRequest](interfaces/FetchVerificationOptionsRequest.md)
 - [FetchVerificationOptionsResponse](interfaces/FetchVerificationOptionsResponse.md)
 - [FoodMenu](interfaces/FoodMenu.md)
@@ -71,11 +71,19 @@ description: 'API Reference documentation for globals in the @vitabletech/gbp-sd
 - [FoodMenus](interfaces/FoodMenus.md)
 - [FoodMenuSection](interfaces/FoodMenuSection.md)
 - [GBPClientConfig](interfaces/GBPClientConfig.md)
+- [GetDailyMetricsTimeSeriesRequest](interfaces/GetDailyMetricsTimeSeriesRequest.md)
+- [GetDailyMetricsTimeSeriesResponse](interfaces/GetDailyMetricsTimeSeriesResponse.md)
 - [Ingredient](interfaces/Ingredient.md)
+- [InsightsValue](interfaces/InsightsValue.md)
+- [ListSearchKeywordsImpressionsMonthlyRequest](interfaces/ListSearchKeywordsImpressionsMonthlyRequest.md)
+- [ListSearchKeywordsImpressionsMonthlyResponse](interfaces/ListSearchKeywordsImpressionsMonthlyResponse.md)
 - [ListVerificationsResponse](interfaces/ListVerificationsResponse.md)
 - [Logger](interfaces/Logger.md)
 - [MenuLabel](interfaces/MenuLabel.md)
 - [Money](interfaces/Money.md)
+- [Month](interfaces/Month.md)
+- [MonthlyRange](interfaces/MonthlyRange.md)
+- [MultiDailyMetricTimeSeries](interfaces/MultiDailyMetricTimeSeries.md)
 - [NormalizedQuotasResponse](interfaces/NormalizedQuotasResponse.md)
 - [NutritionFact](interfaces/NutritionFact.md)
 - [NutritionFacts](interfaces/NutritionFacts.md)
@@ -88,7 +96,10 @@ description: 'API Reference documentation for globals in the @vitabletech/gbp-sd
 - [QuotaRequestOptions](interfaces/QuotaRequestOptions.md)
 - [RequestOptions](interfaces/RequestOptions.md)
 - [SearchChainsResponse](interfaces/SearchChainsResponse.md)
+- [SearchKeywordCount](interfaces/SearchKeywordCount.md)
 - [ServiceBusinessContext](interfaces/ServiceBusinessContext.md)
+- [TimeOfDay](interfaces/TimeOfDay.md)
+- [TimeSeries](interfaces/TimeSeries.md)
 - [TokenStorage](interfaces/TokenStorage.md)
 - [Verification](interfaces/Verification.md)
 - [VerificationOption](interfaces/VerificationOption.md)

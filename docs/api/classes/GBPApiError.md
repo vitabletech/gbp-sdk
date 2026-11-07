@@ -1,8 +1,3 @@
----
-title: 'GBPApiError'
-description: 'API Reference documentation for GBPApiError in the @vitabletech/gbp-sdk.'
----
-
 [**@vitabletech/gbp-sdk**](../index.md)
 
 ---
