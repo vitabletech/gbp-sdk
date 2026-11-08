@@ -57,6 +57,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
+      { text: '⚡ Live Playground', link: 'https://gbp-playground.vitabletech.in' },
       { text: 'Getting Started', link: '/getting-started/introduction' },
       { text: 'Guides', link: '/guides/token-storage' },
       { text: 'API', link: '/api-reference/accounts' },
@@ -64,6 +65,7 @@ export default defineConfig({
       {
         text: `v${pkg.version}`,
         items: [
+          { text: '⚡ Live Playground', link: 'https://gbp-playground.vitabletech.in' },
           { text: 'Changelog', link: 'https://github.com/vitabletech/gbp-sdk/releases' },
           { text: 'NPM', link: 'https://www.npmjs.com/package/@vitabletech/gbp-sdk' }
         ]

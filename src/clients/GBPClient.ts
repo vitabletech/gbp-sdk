@@ -66,6 +66,13 @@ export class GBPClient {
   }
 
   /**
+   * Alias for processAuthCode.
+   */
+  public async handleAuthorizationCode(code: string): Promise<void> {
+    return this.processAuthCode(code);
+  }
+
+  /**
    * Generates the OAuth 2.0 authorization URL for user consent.
    */
   public getAuthorizationUrl(scopes?: string[], state?: string): string {
