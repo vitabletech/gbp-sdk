@@ -2,13 +2,27 @@
 
 Enterprise-grade Google Business Profile (GBP) SDK for Node.js, Next.js, and TypeScript.
 
-![NPM Version](https://img.shields.io/npm/v/@vitabletech/gbp-sdk)
+[![NPM Version](https://img.shields.io/npm/v/@vitabletech/gbp-sdk)](https://www.npmjs.com/package/@vitabletech/gbp-sdk)
+[![License](https://img.shields.io/npm/l/@vitabletech/gbp-sdk)](https://github.com/vitabletech/gbp-sdk/blob/main/LICENSE)
+[![TypeScript](https://img.shields.io/npm/types/@vitabletech/gbp-sdk)](https://www.npmjs.com/package/@vitabletech/gbp-sdk)
+[![Interactive Playground](https://img.shields.io/badge/Live_Playground-Try_Online-4f46e5?style=for-the-badge&logo=google&logoColor=white)](https://gbp-playground.vitabletech.in)
 
-![License](https://img.shields.io/npm/l/@vitabletech/gbp-sdk)
+> ### ⚡ Try the Live Playground &amp; API Explorer
+> Want to test the Google Business Profile APIs without writing code or setting up a local server?  
+> 👉 **[https://gbp-playground.vitabletech.in](https://gbp-playground.vitabletech.in)**  
+> *Test OAuth 2.0 (BYOC), Locations, Performance Metrics v1, Reviews, Verifications, and Quotas with real-time interactive Swagger documentation.*
 
-![TypeScript](https://img.shields.io/npm/types/@vitabletech/gbp-sdk)
+---
 
-> **📖 Full Documentation:** [https://gbp.vitabletech.in](https://gbp.vitabletech.in)
+## 🔗 Quick Links
+
+- **⚡ Live Interactive Playground:** [https://gbp-playground.vitabletech.in](https://gbp-playground.vitabletech.in)
+- **📖 Full Documentation:** [https://gbp.vitabletech.in](https://gbp.vitabletech.in)
+- **📦 NPM Package:** [https://www.npmjs.com/package/@vitabletech/gbp-sdk](https://www.npmjs.com/package/@vitabletech/gbp-sdk)
+- **🐙 GitHub Repository:** [https://github.com/vitabletech/gbp-sdk](https://github.com/vitabletech/gbp-sdk)
+- **🏢 Developed by VitableTech:** [https://vitabletech.in](https://vitabletech.in)
+
+---
 
 ## Features
 

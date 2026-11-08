@@ -10,6 +10,9 @@ hero:
     alt: GBP SDK Hero Image
   actions:
     - theme: brand
+      text: ⚡ Live Playground
+      link: https://gbp-playground.vitabletech.in
+    - theme: brand
       text: Get Started
       link: /getting-started/introduction
     - theme: alt
@@ -173,6 +176,7 @@ import { version } from '../package.json'
   <div class="marquee-content">
     <!-- First set -->
     <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
+    <span class="marquee-item">⚡ Live Playground: gbp-playground.vitabletech.in</span>
     <span class="marquee-item">📊 Performance Metrics v1</span>
     <span class="marquee-item">🔍 Search Keywords Impressions</span>
     <span class="marquee-item">📈 Multi Daily Metrics Time Series</span>
@@ -183,6 +187,7 @@ import { version } from '../package.json'
     <span class="marquee-item">🤖 Auto-Pagination Built-in!</span>
     <!-- Duplicate set for seamless scrolling -->
     <span class="marquee-item">🚀 v{{ version }} is LIVE!</span>
+    <span class="marquee-item">⚡ Live Playground: gbp-playground.vitabletech.in</span>
     <span class="marquee-item">📊 Performance Metrics v1</span>
     <span class="marquee-item">🔍 Search Keywords Impressions</span>
     <span class="marquee-item">📈 Multi Daily Metrics Time Series</span>
